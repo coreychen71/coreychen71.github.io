@@ -3,21 +3,50 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://coreychen71.github.io/categories/blog/</loc>
+    <lastmod>2019-05-07T22:40:22+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://coreychen71.github.io/series/blog%E5%BB%BA%E7%BD%AE%E6%95%99%E5%AD%B8/</loc>
+    <lastmod>2019-05-07T22:40:22+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://coreychen71.github.io/categories/</loc>
-    <lastmod>2019-05-05T15:00:00+08:00</lastmod>
+    <lastmod>2019-05-07T22:40:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://coreychen71.github.io/</loc>
-    <lastmod>2019-05-05T15:00:00+08:00</lastmod>
+    <lastmod>2019-05-07T22:40:22+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://coreychen71.github.io/tags/hugo/</loc>
+    <lastmod>2019-05-07T22:40:22+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://coreychen71.github.io/series/</loc>
+    <lastmod>2019-05-07T22:40:22+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://coreychen71.github.io/tags/</loc>
-    <lastmod>2019-05-05T15:00:00+08:00</lastmod>
+    <lastmod>2019-05-07T22:40:22+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://coreychen71.github.io/post/develop/2019-05/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9/</loc>
+    <lastmod>2019-05-07T22:40:22+08:00</lastmod>
   </url>
   
   <url>
@@ -55,11 +84,6 @@
   
   <url>
     <loc>https://coreychen71.github.io/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://coreychen71.github.io/series/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

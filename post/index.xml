@@ -11,12 +11,21 @@
     
     
     <item>
+      <title>靜態網站產生器介紹</title>
+      <link>https://coreychen71.github.io/post/develop/2019-05/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9/</link>
+      <pubDate>Tue, 07 May 2019 22:40:22 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/post/develop/2019-05/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9/</guid>
+      <description>靜態？動態？ 在介紹靜態網頁框架之前，先稍微了解網頁主要有二種型態，就是分為靜態和動態。 靜態網頁 靜態網頁指的是沒有包含動畫(Flash動畫或Gif動畫)的純文字及圖片網頁，當然也不包含網頁程式(如ASP、PHP、ASP.Net…等)與資料庫的純文字及圖片網頁。 動態網頁 動態網頁則指包含Flash動畫或G</description>
+    </item>
+    
+    <item>
       <title>五月的油桐花</title>
       <link>https://coreychen71.github.io/post/dailylife/2019-05/%E4%BA%94%E6%9C%88%E7%9A%84%E6%B2%B9%E6%A1%90%E8%8A%B1/</link>
       <pubDate>Sun, 05 May 2019 15:00:00 +0800</pubDate>
       
       <guid>https://coreychen71.github.io/post/dailylife/2019-05/%E4%BA%94%E6%9C%88%E7%9A%84%E6%B2%B9%E6%A1%90%E8%8A%B1/</guid>
-      <description>《四月桐、五月雪&amp;hellip;》 油桐花在盛開的時刻，用美麗劃下了生命休止符。 2019/04/28 攝於桃園石門山</description>
+      <description>四月桐、五月雪&amp;hellip; 每年三～五月，雪白的油桐花就會盛開，妝點了翠綠的台灣山巒。 而油桐花容易掉落的特性，往往會在道路上鋪滿一整條浪漫的白色地毯！ 油桐花在盛開的時刻，用美麗劃下了生命休止符。 2019/04/28 攝於桃園石門山</description>
     </item>
     
     <item>
@@ -25,7 +34,7 @@
       <pubDate>Sun, 05 May 2019 10:00:00 +0800</pubDate>
       
       <guid>https://coreychen71.github.io/post/dailylife/2019-05/%E5%BA%8F%E7%AB%A0/</guid>
-      <description>為何會想建立這個Blog？ 建立Blog這件事，其實很久之前就一直有這個想法了，只是一直未真正的去實行。 早在之前Hexo 出現沒多久，我就有試玩了一下，那時選用的主題為 NexT，可惜那時候只有把Blog架起來，後續卻一直都沒想到要去寫Blog！ 那為何又興起這個念頭呢？最近開始感覺到自己的記憶力越來越差了，尤其是在學習開發這件事情上，學的東西越多，就有越多的東西記不住XD&amp;hellip; 主要另一方面也是</description>
+      <description>為何會想建立這個部落格？ 建立部落格這件事，其實很久之前就一直有這個想法了，只是一直未真正的去實行。 早在之前Hexo 出現沒多久，我就有試玩了一下，那時選用的主題為 NexT，可惜那時候只有把部落格架起來，套用好主題後，卻一直都沒想到要去寫部落格，當然最後就是不了了之！ 那為何又興起這個念頭呢？因為最近開始</description>
     </item>
     
   </channel>

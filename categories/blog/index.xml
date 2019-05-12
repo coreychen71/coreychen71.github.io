@@ -5,10 +5,19 @@
     <link>https://coreychen71.github.io/categories/blog/</link>
     <description>Recent content in Blog on Corey Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 07 May 2019 22:40:22 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2019 13:52:51 +0800</lastBuildDate>
     
 	<atom:link href="https://coreychen71.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何使用Hugo建置網站</title>
+      <link>https://coreychen71.github.io/post/develop/2019-05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E7%BD%AE%E7%B6%B2%E7%AB%99/</link>
+      <pubDate>Sat, 11 May 2019 13:52:51 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/post/develop/2019-05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E7%BD%AE%E7%B6%B2%E7%AB%99/</guid>
+      <description>這邊我Demo的環境為macOS。 Hugo連結 官網 GitHub 準備環境 Windows系統 Windows的用戶請直接從Hugo GitHub下載安裝檔解壓後直接安裝即可。 Release Version 0.55.5 檔案連結 macOS系統 macOS則必需透過Homebrew這個套件管理軟體來進行安裝，所以首先要安裝Homebrew，當然若您已安裝過此套</description>
+    </item>
     
     <item>
       <title>靜態網站產生器介紹</title>

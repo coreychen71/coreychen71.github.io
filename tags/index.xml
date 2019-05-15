@@ -5,15 +5,24 @@
     <link>https://coreychen71.github.io/tags/</link>
     <description>Recent content in Tags on Corey Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 11 May 2019 13:52:51 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 May 2019 20:56:40 +0800</lastBuildDate>
     
 	<atom:link href="https://coreychen71.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>GitHub</title>
+      <link>https://coreychen71.github.io/tags/github/</link>
+      <pubDate>Wed, 15 May 2019 20:56:40 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hugo</title>
       <link>https://coreychen71.github.io/tags/hugo/</link>
-      <pubDate>Sat, 11 May 2019 13:52:51 +0800</pubDate>
+      <pubDate>Wed, 15 May 2019 20:56:40 +0800</pubDate>
       
       <guid>https://coreychen71.github.io/tags/hugo/</guid>
       <description></description>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitHub on Corey Chen&#39;s Blog</title>
+    <link>https://coreychen71.github.io/tags/github/</link>
+    <description>Recent content in GitHub on Corey Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 May 2019 20:56:40 +0800</lastBuildDate>
+    
+	<atom:link href="https://coreychen71.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>將網站部署至GitHub Page</title>
+      <link>https://coreychen71.github.io/post/develop/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/</link>
+      <pubDate>Wed, 15 May 2019 20:56:40 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/post/develop/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/</guid>
+      <description>GitHub簡介 GitHub是透過Git進行版本控制的軟體原始碼代管服務平台，它有免費和付費二種，若您希望您放在GitHub上的專案能設成Private，那就要付費，因為免費用戶的專案都只能為Public，GitHub裡面的專案均可以透過標準的Git命令進行存取和操作，所有的Git命令都可以用到Gi</description>
+    </item>
+    
+  </channel>
+</rss>

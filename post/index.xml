@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>將網站部署至GitHub Page</title>
+      <link>https://coreychen71.github.io/post/develop/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/</link>
+      <pubDate>Wed, 15 May 2019 20:56:40 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/post/develop/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/</guid>
+      <description>GitHub簡介 GitHub是透過Git進行版本控制的軟體原始碼代管服務平台，它有免費和付費二種，若您希望您放在GitHub上的專案能設成Private，那就要付費，因為免費用戶的專案都只能為Public，GitHub裡面的專案均可以透過標準的Git命令進行存取和操作，所有的Git命令都可以用到Gi</description>
+    </item>
+    
+    <item>
       <title>如何使用Hugo建置網站</title>
       <link>https://coreychen71.github.io/post/develop/2019-05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E7%BD%AE%E7%B6%B2%E7%AB%99/</link>
       <pubDate>Sat, 11 May 2019 13:52:51 +0800</pubDate>
@@ -26,15 +35,6 @@
       
       <guid>https://coreychen71.github.io/post/develop/2019-05/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9/</guid>
       <description>靜態？動態？ 在介紹靜態網頁框架之前，先稍微了解網頁主要有二種型態，就是分為靜態和動態。 靜態網頁 靜態網頁指的是沒有包含動畫(Flash動畫或Gif動畫)的純文字及圖片網頁，當然也不包含網頁程式(如ASP、PHP、ASP.Net…等)與資料庫的純文字及圖片網頁。 動態網頁 動態網頁則指包含Flash動畫或G</description>
-    </item>
-    
-    <item>
-      <title>五月的油桐花</title>
-      <link>https://coreychen71.github.io/post/dailylife/2019-05/%E4%BA%94%E6%9C%88%E7%9A%84%E6%B2%B9%E6%A1%90%E8%8A%B1/</link>
-      <pubDate>Sun, 05 May 2019 15:00:00 +0800</pubDate>
-      
-      <guid>https://coreychen71.github.io/post/dailylife/2019-05/%E4%BA%94%E6%9C%88%E7%9A%84%E6%B2%B9%E6%A1%90%E8%8A%B1/</guid>
-      <description>四月桐、五月雪&amp;hellip; 每年三～五月，雪白的油桐花就會盛開，妝點了翠綠的台灣山巒。 而油桐花容易掉落的特性，往往會在道路上鋪滿一整條浪漫的白色地毯！ 油桐花在盛開的時刻，用美麗劃下了生命休止符。 2019/04/28 攝於桃園石門山</description>
     </item>
     
     <item>

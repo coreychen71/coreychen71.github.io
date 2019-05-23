@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Corey Chen&#39;s Blog</title>
+    <link>https://coreychen71.github.io/categories/windows/</link>
+    <description>Recent content in Windows on Corey Chen&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 23 May 2019 21:27:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://coreychen71.github.io/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Windows 10 升級 1903 與開啟沙箱功能</title>
+      <link>https://coreychen71.github.io/post/develop/2019-05/windows10_upgrade_1903_and_sandbox/</link>
+      <pubDate>Thu, 23 May 2019 21:27:00 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/post/develop/2019-05/windows10_upgrade_1903_and_sandbox/</guid>
+      <description>Windows 10 May 2019 Update Windows 10 1903 在 2019/05/22 正式上線了！ Windows 10 使用者，可以透過「設定」-&amp;gt;「更新和安全性」-&amp;gt;「Windows Update」，選擇「檢查更新」後，看是否有 Windows 10 1903 的更新訊息。因為並不是每位 Windows 10 使用者，都可以選擇立即下載並安裝Windows10 1903。因為上一次 Windows 10 1809 更新後，許多電腦出現各式各樣的 B</description>
+    </item>
+    
+  </channel>
+</rss>

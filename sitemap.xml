@@ -3,6 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://coreychen71.github.io/categories/</loc>
+    <lastmod>2019-05-23T21:27:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://coreychen71.github.io/</loc>
+    <lastmod>2019-05-23T21:27:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://coreychen71.github.io/tags/</loc>
+    <lastmod>2019-05-23T21:27:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://coreychen71.github.io/categories/windows/</loc>
+    <lastmod>2019-05-23T21:27:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://coreychen71.github.io/post/develop/2019-05/windows10_upgrade_1903_and_sandbox/</loc>
+    <lastmod>2019-05-23T21:27:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://coreychen71.github.io/tags/windows10/</loc>
+    <lastmod>2019-05-23T21:27:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://coreychen71.github.io/tags/%E6%B2%99%E7%AE%B1/</loc>
+    <lastmod>2019-05-23T21:27:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://coreychen71.github.io/categories/blog/</loc>
     <lastmod>2019-05-15T20:56:40+08:00</lastmod>
     <priority>0</priority>
@@ -10,18 +51,6 @@
   
   <url>
     <loc>https://coreychen71.github.io/series/blog%E5%BB%BA%E7%BD%AE%E6%95%99%E5%AD%B8/</loc>
-    <lastmod>2019-05-15T20:56:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://coreychen71.github.io/categories/</loc>
-    <lastmod>2019-05-15T20:56:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://coreychen71.github.io/</loc>
     <lastmod>2019-05-15T20:56:40+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -40,12 +69,6 @@
   
   <url>
     <loc>https://coreychen71.github.io/series/</loc>
-    <lastmod>2019-05-15T20:56:40+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://coreychen71.github.io/tags/</loc>
     <lastmod>2019-05-15T20:56:40+08:00</lastmod>
     <priority>0</priority>
   </url>

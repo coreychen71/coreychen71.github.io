@@ -5,10 +5,19 @@
     <link>https://coreychen71.github.io/</link>
     <description>Recent content on Corey Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 25 May 2019 10:04:19 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 25 May 2019 19:45:13 +0800</lastBuildDate>
     
 	<atom:link href="https://coreychen71.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo 加入 Disqus 整合性留言管理系統</title>
+      <link>https://coreychen71.github.io/post/develop/2019-05/hugoadddisqus/</link>
+      <pubDate>Sat, 25 May 2019 19:45:13 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/post/develop/2019-05/hugoadddisqus/</guid>
+      <description>Disqus Disqus 是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言，想要留言的訪客可以透過Disqus 會員、Facebook 帳號、Twitter 帳號等方式進行留言，同時它也可以幫您統計訪客留言排行榜，也可以透過本身的分享機制把文章分享出去，部落格肯定會希望能有一個留言板，以方便</description>
+    </item>
     
     <item>
       <title>Hugo 加入 Google Analytics</title>

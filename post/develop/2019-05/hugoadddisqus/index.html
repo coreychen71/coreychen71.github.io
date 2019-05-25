@@ -23,15 +23,15 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="Corey Chen&#39;s Blog">
-  <meta name="description" content="Google Analytics Google Analytics，一般都會簡稱GA，是由 Google 所提供的數據分析工具，可用來分析網站或 APP 的數據使用狀況（只是目前仍使用在網站數據分析居多），由於使用 Google 搜尋引擎的人數比例將近超過80%，所以大家自然地對於 GA 的數據準確度也有比較高的信任度。GA 基本版是完全免費的，基本版的功能已經完全足夠中小型網站使用">
+  <meta name="description" content="Disqus Disqus 是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言，想要留言的訪客可以透過Disqus 會員、Facebook 帳號、Twitter 帳號等方式進行留言，同時它也可以幫您統計訪客留言排行榜，也可以透過本身的分享機制把文章分享出去，部落格肯定會希望能有一個留言板，以方便">
 
   <title>
   
-       Hugo 加入 Google Analytics | Corey Chen&#39;s Blog 
+       Hugo 加入 Disqus 整合性留言管理系統 | Corey Chen&#39;s Blog 
   
   </title>
 
-  <link rel="canonical" href="https://coreychen71.github.io/post/develop/2019-05/hugoaddgoogleanalytics/">
+  <link rel="canonical" href="https://coreychen71.github.io/post/develop/2019-05/hugoadddisqus/">
 
   
   
@@ -347,7 +347,7 @@
     
   </ul>
 
-  <div class="px-4 post-heading">Hugo 加入 Google Analytics</div>
+  <div class="px-4 post-heading">Hugo 加入 Disqus 整合性留言管理系統</div>
 
   <ul class="post-meta li-x mt-1">
     
@@ -356,14 +356,14 @@
 
     
       <li class="middot"></li>
-      <li>3 Minutes Read</li>
+      <li>4 Minutes Read</li>
     
       <li class="middot"></li>
-      <li><span class="post-word-count">1230 Words</span></li>
+      <li><span class="post-word-count">1549 Words</span></li>
   </ul>
   
     <div class="view">
-      <img src="https://coreychen71.github.io/images/Develop/2019052501/GoogleAnalytics.png" />
+      <img src="https://coreychen71.github.io/images/Develop/2019052502/DisqusLogo.png" />
     </div>
   
 
@@ -373,67 +373,119 @@
           <div class="post-content markdown">
             
 
-<h3 id="google-analytics">Google Analytics</h3>
+<h3 id="disqus">Disqus</h3>
 
-<p>Google Analytics，一般都會簡稱GA，是由 Google 所提供的數據分析工具，可用來分析網站或 APP 的數據使用狀況（只是目前仍使用在網站數據分析居多），由於使用 Google 搜尋引擎的人數比例將近超過80%，所以大家自然地對於 GA 的數據準確度也有比較高的信任度。GA 基本版是完全免費的，基本版的功能已經完全足夠中小型網站使用了，只有數據量較大或是有其他更多需求的企業網站才會需要使用到進階版GA 360（原名 : GA Premium）。</p>
+<p>Disqus 是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言，想要留言的訪客可以透過Disqus 會員、Facebook 帳號、Twitter 帳號等方式進行留言，同時它也可以幫您統計訪客留言排行榜，也可以透過本身的分享機制把文章分享出去，部落格肯定會希望能有一個留言板，以方便和其他人進行交流或分享，然而最常見的就是 Disqus 留言板，因此本篇就是要說明如何在將 Disqus 留言板加入 Hugo。</p>
 
-<h5 id="使用-ga-的好處">使用 GA 的好處</h5>
+<h3 id="disqus-註冊帳號">Disqus 註冊帳號</h3>
 
 <ul>
-<li>了解使用者是透過怎樣的方式進入網站</li>
-<li>了解進入網站的目標對象</li>
-<li>觀察使用者進入網站後的行為流程
+<li>官方網站 👉 <a href="https://disqus.com/" target="_blank">Disqus</a></li>
+<li>申請教學 👉 <a href="https://vineo.cn/config-disqus.html" target="_blanl">为你博客添加disqus评论系统</a><br />
 <br /></li>
 </ul>
 
-<p>所以若是您也希望您的 Hugo 網站能夠透過 GA 來分析使用上的數據，享受 GA 所帶來的上述好處，可以去申請 GA ，再將 GA 加到自己的 Blog 裡，至於要如何申請 GA 功能，這邊就不再特地撰述了，想了解如何申請的人，可以參考 <strong><code>翔說什麼</code></strong> 的教學文章。</p>
+<p>如何註冊帳號一樣就不特別說明了，註冊算是還滿簡單的，若真的不清楚註冊的方式，可以參考上方的申請教學網址，<a href="https://vineo.cn/" target="_blank"> <strong><code>23.9K</code></strong></a> 在他的部茖格裡把整個註冊流程解釋的很清楚了。</p>
 
-<p>👉 <a href="https://shian.tw/article/55" target="_blank">GA 帳號申請、GA設定、GA驗證，3個步驟一次說明</a></p>
+<h3 id="在-hugo-上啟用-disqus">在 Hugo 上啟用 Disqus</h3>
 
-<h3 id="在-hugo-上啟用-ga">在 Hugo 上啟用 GA</h3>
+<p>Hugo 官方說明文件 👉 <a href="https://gohugo.io/templates/internal/" target="_blank">Internal Templates</a></p>
 
-<p>當你申請好 GA 服務並已拿到 GA 追蹤碼，接著就可以開始著手把 GA 加入到您的 Hugo 網站。<br />
-<img src="https://coreychen71.github.io/images/Develop/2019052501/GA_TrackingID.png" alt="GA" /></p>
+<p>開啟網站全域配置檔 Config.toml，加入下方參數，後面的 DisqusShortname 記得要改成您註冊時所填的 Shortname</p>
 
-<p><strong><code>Hugo</code></strong> 官方的內部模板說明文件 👉 <a href="https://gohugo.io/templates/internal/#google-analytics" target="_blank">Internal Templates</a> 有提到 Google Analytics 的使用方式。</p>
-
-<p>首先必需在網站的全域配置檔，設置剛剛申請的 GA 追蹤碼，開啟 Hugo 網站根目錄的 Config.toml，加入下面的參數</p>
-
-<pre><code class="language-shell">googleAnalytics = &quot;UA-139XXXXXX-1&quot;
+<pre><code class="language-shell">disqusShortname = &quot;DisqusShortname&quot;
 </code></pre>
 
-<p><img src="https://coreychen71.github.io/images/Develop/2019052501/Config.png" alt="Config.toml" /></p>
+<p><img src="https://coreychen71.github.io/images/Develop/2019052502/Config.png" alt="Config.toml" /></p>
 
-<p>接著先在根目錄的 layouts 目錄下，新增二個目錄，分別為 <strong><code>partials</code></strong> 和 <strong><code>_internal</code></strong><br />
-<img src="https://coreychen71.github.io/images/Develop/2019052501/AddFolder.png" alt="AddFolder" /></p>
+<p>接著在根目錄 /layouts/partials/ 裡新增 disqus.html 檔案，然後把官方提供的 Script 貼到 disqus.html 檔案裡並存檔。<br />
+<font color="#DC143C">注意：若您在根目錄 /layouts 下看不到 /partials 目錄，請您自行新增此目錄。</font></p>
 
-<p>再來進到您所套用的主題目錄裡，找到 partials/head.html 檔案，將它複製到剛在根目錄建立的 /layouts/partials/ 目錄下！<br />
-以我所使用的 AllinOne 主題來說，就是把 /themes/AllinOne/layouts/partials/head.html 複製到網站根目錄下的 /layouts/partials/head.html。為何要如此，那是因為 Hugo 內建模板的文件生成優先權大於主題目錄，所以把主題目錄裡的 Head.html 複製到內建模板下，這樣每次生成網站文件時，它會以內建模板為主，我選擇這樣的方式是不想去更動主題原先配置的樣板，當然您若是想要直接修改主題目錄裡的 Head.html 也是可以的，不一定要照官方的方式。
-<img src="https://coreychen71.github.io/images/Develop/2019052501/CopyHead.png" alt="CopyHead.html" /></p>
+<p>官方提供的 Script 如下：</p>
 
-<p>然後在剛建立的 _internal 目錄下，新增 google_analytics_async.html 檔案，將 GA 的全域網站代碼（gtag.js）Copy 到 google_analytics_async.html 裡並存檔<br />
-<img src="https://coreychen71.github.io/images/Develop/2019052501/gtagjs.png" alt="gtagjs" />
-<img src="https://coreychen71.github.io/images/Develop/2019052501/PasteGtagjs.png" alt="PasteGtagjs" /></p>
+<pre><code class="language-js">&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
 
-<p>緊接著開啟剛剛複製的 Head.html ，貼上下方的代碼，這樣在生成文件時，它就會自動在每個頁面幫我們把 google_analytics_async.html 裡的 Script 給引用進來。</p>
+(function() {
+    // Don't ever inject Disqus on localhost--it creates unwanted
+    // discussions from 'localhost:1313' on your Disqus account...
+    if (window.location.hostname == &quot;localhost&quot;)
+        return;
 
-<pre><code class="language-shell">{{ template &quot;_internal/google_analytics_async.html&quot; . }}
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = '{{ .Site.DisqusShortname }}';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href=&quot;http://disqus.com/&quot; class=&quot;dsq-brlink&quot;&gt;comments powered by &lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
-<p>但其實上述的做法會有個缺點，就是當我們今天若只是在本機進行撰寫文章與測試時，它一樣會引用進來，這樣我們在 GA 上的分析就會失真，所以為了避免進行本機測試時，GA 上傳頁面的訪問訊息，可以再加上一個判斷的條件。加上這個判斷後，這樣在本機進行撰寫與測試時，它就不會把 GA 給引用進來了。這個方式是在生成文件時，它會判別是否為 Server 模式！</p>
+<p>再到您 Hugo 主題的目錄下，找到 single.html 檔案，以我所使用的 AllinOne 主題來說，它的路徑如下：<br />
+/themes/AllinOne/layouts/_default/single.html，請將 single.html Copy 至根目錄 /layouts/_default/ 下。<br />
+<font color="#DC143C">一樣，若您在根目錄 /layouts 下看不到 /_default 目錄，請您自行新增此目錄。</font><br />
+<img src="https://coreychen71.github.io/images/Develop/2019052502/CopyFile.png" alt="CopyFile" /></p>
 
-<pre><code class="language-shell">{{ if not .Site.IsServer }}
-{{ template &quot;_internal/google_analytics_async.html&quot; . }}
-{{ end }}
+<p>開啟剛剛 Copy 至根目錄 /layouts/_default/single.html 檔案，找到適當的位置，貼上下方語法</p>
+
+<pre><code class="language-html">&lt;div class=&quot;disqus markdown&quot;&gt;
+  {{ partial &quot;disqus.html&quot; . }}
+&lt;/div&gt;
 </code></pre>
 
-<p>到這邊，就已經完成了 Hugo 配置 Google Analytics，只要進行網站生成，去查看根目錄下 /public 裡的網站文件檔，可以看到在生成文件的同時，它已經幫我們把 GA 給引用進來了。<br />
-<img src="https://coreychen71.github.io/images/Develop/2019052501/Index.png" alt="Index" /></p>
+<p><strong>何謂適當的位置，這必要需要看您所採用的主題為何，基本上就是要把上述那段語法貼在文章結束的位置，這樣 Disqus 才會出現在文章下方，以我所採用的 AllinOne 主題來說，我選擇把它貼在下圖中的位置，所以請您依您採用的主題進行微調。</strong><br />
+<img src="https://coreychen71.github.io/images/Develop/2019052502/Single.png" alt="single.html" /></p>
 
-<p>網站發佈後，若有人瀏覽過您的網站，您就可以在 GA 上看到分析的報表了。<br />
-<img src="https://coreychen71.github.io/images/Develop/2019052501/GA_Report.png" alt="GA_Report" /></p>
+<p>大致上這樣就完成了 Hugo 加上 Disqus 的配置，這時我們把本地端的 Sever 運行起來看一下文章下方是否已經出現 Disqus？這時您會發現，咦！怎麼都沒看到 Disqus！可是卻能看到一個 <a href="http://disqus.com/" target="_blank">comments powered by Disqus</a> 連結。<br />
+<img src="https://coreychen71.github.io/images/Develop/2019052502/NoDisqus.png" alt="NoDisqus" /></p>
 
-<p>透過 GA 的分析，可以讓我們清楚知道網站流量外，也能了解自己的部落格那篇文章點閱率最高，上述就是在 Hugo 配置 Google Analytics 的過程，若您有更好的方式或是我有筆誤的地方，歡迎透過下方的 Disqus 留言讓我知道。</p>
+<p>這是因為官方所提供的 Script 裡面其中一段語法的關係</p>
+
+<pre><code class="language-js">if (window.location.hostname == &quot;localhost&quot;)
+  return;
+</code></pre>
+
+<p>它的作用是當本地端 Server 運行時，就 return 中止，所以我們才會看不到 Disqus，這是因為當自己在編輯文章並運行 Server 進行預覽時，不需要用到留言的功能，所以才會採用這個判斷式來避免本地端的 Server 模式啟用Disqus功能。若您希望在本地端 Server 模式下，也能看到 Disqus，只要把上述那二行給註解掉並存檔就可以了。<br />
+<img src="https://coreychen71.github.io/images/Develop/2019052502/Annotation.png" alt="Annotation" /></p>
+
+<p>這時再看一下剛剛開啟的文章最下方，就可以看到 Disqus 出現了。<br />
+<img src="https://coreychen71.github.io/images/Develop/2019052502/ShowDisqus.png" alt="ShowDisqus" /></p>
+
+<hr />
+
+<h3 id="disqus-還是不出現">Disqus 還是不出現？</h3>
+
+<p><strong>明明都有依照上述步驟進行了，可是就是看不到 Disqus！</strong><br />
+若您有遇到此情況，可以試試我的解法&hellip;沒錯，因為我自己就是遇到了這個情況 😫<br />
+當然這是我所遇到的情況，也許您所遇到的情況和我不同，但您可以試試朝著這個方向去解決。<br />
+首先，我開啟 Chrome 的偵錯工具，找到那段 Script 的位置，先查看問題出在那，很明顯的可以看出 disqus_shortname 這個變數是空白的！也就是這個變數並沒有取到 Config.toml 裡的 disqusShortname 參數值。<br />
+<img src="https://coreychen71.github.io/images/Develop/2019052502/NoShortname.png" alt="NoShortName" /></p>
+
+<p>開啟根目錄 /layouts/partials/disqus.html 檔案，找到那個變數的位址，我想會不會是在取值的參數名稱的關係，因為大小寫的不同，所以它無法抓到正確的參數值，於是我把取值的參數名稱改成和 Config.toml 裡的名稱一樣。</p>
+
+<pre><code class="language-js">//變更前
+{{ .Site.DisqusShortname }}
+
+//變更後
+{{ .Site.disqusShortname }}
+</code></pre>
+
+<p>存檔後，反而連網站都不能正常運作了，終端機裡運行的 Server 也跳出了錯誤訊息。<br />
+<img src="https://coreychen71.github.io/images/Develop/2019052502/TerminalError.png" alt="TerminalError" /><br />
+<img src="https://coreychen71.github.io/images/Develop/2019052502/WebError.png" alt="WebError" /></p>
+
+<p>於是我再仔細查看官方文件 👉 <a href="https://gohugo.io/variables/site/" target="_blank">Site Variables</a>，也的確有這個變數值，但怎麼就是抓不到值呢？<br />
+<img src="https://coreychen71.github.io/images/Develop/2019052502/SiteVariables.png" alt="SiteVariables" /></p>
+
+<p>最後在反覆仔細檢查下，才發現問題所在，就是我自己在 Config.toml 新增 disqusShortname 參數值時，貼錯了位置！<br />
+我把它貼在 params 的下方，難怪會抓不到值 😝<br />
+<img src="https://coreychen71.github.io/images/Develop/2019052502/ErrorLocation.png" alt="ErrorLocation" /></p>
+
+<p>只要把它從 params 區塊移走，放在原本 site 區塊的位置，就一切正常了。<br />
+<img src="https://coreychen71.github.io/images/Develop/2019052502/OkLocation.png" alt="OkLocation" /></p>
+
+<p><strong>複製、貼上的動作，做起來簡單，但要是貼錯位置，就是挖洞給自己跳。</strong></p>
 
           </div>
 
@@ -450,7 +502,7 @@
       <li><a href="https://coreychen71.github.io/tags/hugo" role="button">Hugo </a></li>
       
     
-      <li><a href="https://coreychen71.github.io/tags/analytics" role="button">Analytics </a></li>
+      <li><a href="https://coreychen71.github.io/tags/disqus" role="button">Disqus </a></li>
       
     
   </div>
@@ -466,23 +518,16 @@
           <div class="row pt-3">
             <div class="col-md-6">
               
-              <a href=https://coreychen71.github.io/post/develop/2019-05/windows10_upgrade_1903_and_sandbox/ class="post-meta">Previous
+              <a href=https://coreychen71.github.io/post/develop/2019-05/hugoaddgoogleanalytics/ class="post-meta">Previous
                 <div class="pt-2 pb-5 d-flex">
                   <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                  <span>Windows 10 升級 1903 與開啟沙箱功能</span>
+                  <span>Hugo 加入 Google Analytics</span>
                 </div>
               </a>
               
             </div>
             
             <div class="col-md-6 text-right" >
-              
-              <a href=https://coreychen71.github.io/post/develop/2019-05/hugoadddisqus/ class="post-meta">Next
-                <div class="pt-2 pb-5 flex-reverse">
-                  <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                  <span>Hugo 加入 Disqus 整合性留言管理系統</span>
-                </div>
-              </a>
               
             </div>
 
@@ -549,8 +594,8 @@
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#google-analytics">
-												 Google Analytics
+						 					<a class="nav-link" href="#disqus">
+												 Disqus
 											</a>
 										</li>
 						 
@@ -575,8 +620,60 @@
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%9c%a8-hugo-%e4%b8%8a%e5%95%9f%e7%94%a8-ga">
-												 在 Hugo 上啟用 GA
+						 					<a class="nav-link" href="#disqus-%e8%a8%bb%e5%86%8a%e5%b8%b3%e8%99%9f">
+												 Disqus 註冊帳號
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%9c%a8-hugo-%e4%b8%8a%e5%95%9f%e7%94%a8-disqus">
+												 在 Hugo 上啟用 Disqus
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#disqus-%e9%82%84%e6%98%af%e4%b8%8d%e5%87%ba%e7%8f%be">
+												 Disqus 還是不出現？
 											</a>
 										</li>
 						 

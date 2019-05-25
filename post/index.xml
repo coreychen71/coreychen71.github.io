@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Hugo 加入 Google Analytics</title>
+      <link>https://coreychen71.github.io/post/develop/2019-05/hugoaddgoogleanalytics/</link>
+      <pubDate>Sat, 25 May 2019 10:04:19 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/post/develop/2019-05/hugoaddgoogleanalytics/</guid>
+      <description>Google Analytics Google Analytics，一般都會簡稱GA，是由 Google 所提供的數據分析工具，可用來分析網站或 APP 的數據使用狀況（只是目前仍使用在網站數據分析居多），由於使用 Google 搜尋引擎的人數比例將近超過80%，所以大家自然地對於 GA 的數據準確度也有比較高的信任度。GA 基本版是完全免費的，基本版的功能已經完全足夠中小型網站使用</description>
+    </item>
+    
+    <item>
       <title>Windows 10 升級 1903 與開啟沙箱功能</title>
       <link>https://coreychen71.github.io/post/develop/2019-05/windows10_upgrade_1903_and_sandbox/</link>
       <pubDate>Thu, 23 May 2019 21:27:00 +0800</pubDate>

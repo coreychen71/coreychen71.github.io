@@ -371,7 +371,7 @@
   </ul>
   
     <div class="view">
-      <img src="https://coreychen71.github.io/img/post/Develop/2019050701/HUGO.png" />
+      <img src="https://coreychen71.github.io/images/Develop/2019050701/HUGO.png" />
     </div>
   
 
@@ -398,7 +398,7 @@
 <p>Windows的用戶請直接從Hugo GitHub下載安裝檔解壓後直接安裝即可。<br />
 Release Version 0.55.5
 <a href="https://github.com/gohugoio/hugo/releases/tag/v0.55.5" target="_blank">檔案連結</a><br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/Hugo_Windows.png" alt="HugoWindowsInstaller" /></p>
+<img src="https://coreychen71.github.io/images/Develop/2019051101/Hugo_Windows.png" alt="HugoWindowsInstaller" /></p>
 
 <h5 id="macos系統">macOS系統</h5>
 
@@ -407,7 +407,7 @@ Release Version 0.55.5
 <h6 id="安裝homebrew">安裝Homebrew</h6>
 
 <p><a href="https://brew.sh/index_zh-tw" target="_blank">官網</a><br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/Homebrew.png" alt="Homebrew" /></p>
+<img src="https://coreychen71.github.io/images/Develop/2019051101/Homebrew.png" alt="Homebrew" /></p>
 
 <p>開啟終端機，貼上下述指令</p>
 
@@ -419,7 +419,7 @@ Release Version 0.55.5
 <pre><code class="language-shell">brew -v
 </code></pre>
 
-<p><img src="https://coreychen71.github.io/img/post/Develop/2019051101/HomebrewInstaller.png" alt="Homebrew" title="查看Hoembrew版號" /></p>
+<p><img src="https://coreychen71.github.io/images/Develop/2019051101/HomebrewInstaller.png" alt="Homebrew" title="查看Hoembrew版號" /></p>
 
 <hr />
 
@@ -433,7 +433,7 @@ Release Version 0.55.5
 <pre><code class="language-shell">hugo version
 </code></pre>
 
-<p><img src="https://coreychen71.github.io/img/post/Develop/2019051101/HugoInstaller.png" alt="Hugo" title="查看Hugo版號" /><br />
+<p><img src="https://coreychen71.github.io/images/Develop/2019051101/HugoInstaller.png" alt="Hugo" title="查看Hugo版號" /><br />
 環境都準備好了後，就可以開始準備建置網站啦。</p>
 
 <hr />
@@ -447,7 +447,7 @@ Release Version 0.55.5
 </code></pre>
 
 <p>出現下述訊息即表示已成功生成網站，根目錄下也會出現Hugo相關檔案。<br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/CreateNewWebSite.png" alt="Installer" title="生成成功訊息" /></p>
+<img src="https://coreychen71.github.io/images/Develop/2019051101/CreateNewWebSite.png" alt="Installer" title="生成成功訊息" /></p>
 
 <h6 id="hugo目錄結構">Hugo目錄結構</h6>
 
@@ -460,7 +460,7 @@ Release Version 0.55.5
 <li>themes - 儲放主題。</li>
 <li>public - 執行hugo命令後，儲放生成靜態文件的地方。 (圖片未顯示是因為還沒執行過生成命令。)</li>
 <li>config.toml - 網站的配置文件。<br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/HugoFiles.png" alt="installer" /><br />
+<img src="https://coreychen71.github.io/images/Develop/2019051101/HugoFiles.png" alt="installer" /><br />
 <br /></li>
 </ul>
 
@@ -475,8 +475,8 @@ Release Version 0.55.5
 </code></pre>
 
 <p>Clone完成後，在 /themes下就會出現該主題的目錄 /hyde-hyde。<br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/GitClone.png" alt="GitClone" title="Clone成功的訊息" /><br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/hyde-hydeDirectory.png" alt="Directory" title="/themes/hyde-hyde/" /></p>
+<img src="https://coreychen71.github.io/images/Develop/2019051101/GitClone.png" alt="GitClone" title="Clone成功的訊息" /><br />
+<img src="https://coreychen71.github.io/images/Develop/2019051101/hyde-hydeDirectory.png" alt="Directory" title="/themes/hyde-hyde/" /></p>
 
 <hr />
 
@@ -485,11 +485,11 @@ Release Version 0.55.5
 <p>下載好要用的主題後，接下來就可以開始著手套用主題了！<br />
 在開始之前，需要準備一個好用的編輯器，我個人是使用<a href="https://code.visualstudio.com/" target="_blank"><strong><code>VSCode</code></strong></a>，當然您可以使用如<a href="https://www.sublimetext.com/" target="_blank"><strong><code>Sublime Text</code></strong></a>或<a href="http://pad.haroopress.com/user.html" target="_blank"><strong><code>Haroopad</code></strong></a>等等的編輯器。接著就是用編輯器打開 CoreyDemo/config.toml這個配置檔。<br />
 config.toml預設值就像下圖，一開始只有3個設定值<br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/HugoConfigDefault.png" alt="config.toml" /><br />
+<img src="https://coreychen71.github.io/images/Develop/2019051101/HugoConfigDefault.png" alt="config.toml" /><br />
 為了可以更快速的配置，我們可以到<a href="https://github.com/htr3n/hyde-hyde/blob/master/exampleSite/config.toml" target="_blank"><strong><code>hyde-hyde GitHub</code></strong></a>裡的示範目錄裡，將它Demo用的配置檔內容複製，貼到自己的配置檔裡面。<br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/hyde-hydeConfig.png" alt="config.toml" /><br />
+<img src="https://coreychen71.github.io/images/Develop/2019051101/hyde-hydeConfig.png" alt="config.toml" /><br />
 貼上去後，可以先將網站名稱改成自己要取的名稱並存檔。<br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/hyde-hydeDemoConfig.png" alt="config.toml" /></p>
+<img src="https://coreychen71.github.io/images/Develop/2019051101/hyde-hydeDemoConfig.png" alt="config.toml" /></p>
 
 <hr />
 
@@ -500,11 +500,11 @@ config.toml預設值就像下圖，一開始只有3個設定值<br />
 <pre><code class="language-shell">hugo
 </code></pre>
 
-<p><img src="https://coreychen71.github.io/img/post/Develop/2019051101/hugoDemo.png" alt="Hugo" title="透過hugo指令生成檔案" /><br />
+<p><img src="https://coreychen71.github.io/images/Develop/2019051101/hugoDemo.png" alt="Hugo" title="透過hugo指令生成檔案" /><br />
 生成完檔後，再使用hugo server將本地端的服務運行起來，運行起來後，可以看到本地端的連線位址，請將此位址複製。<br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/HugoServerRun.png" alt="Hugo" /><br />
+<img src="https://coreychen71.github.io/images/Develop/2019051101/HugoServerRun.png" alt="Hugo" /><br />
 開啟瀏覽器，將剛剛複製的本地端位址貼到網圵列，按下Enter，就能看到剛建置成完的網站了。<br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/hyde-hyde-Demo.png" alt="WebSiteDemo" /></p>
+<img src="https://coreychen71.github.io/images/Develop/2019051101/hyde-hyde-Demo.png" alt="WebSiteDemo" /></p>
 
 <hr />
 
@@ -516,10 +516,10 @@ config.toml預設值就像下圖，一開始只有3個設定值<br />
 <pre><code class="language-shell">hugo new posts/Demo.md
 </code></pre>
 
-<p><img src="https://coreychen71.github.io/img/post/Develop/2019051101/HugoNewPost.png" alt="Hugo" title="建立新文章" /><br />
+<p><img src="https://coreychen71.github.io/images/Develop/2019051101/HugoNewPost.png" alt="Hugo" title="建立新文章" /><br />
 接著用編輯器將剛生成的Demo.md檔案開啟，就可以開始編輯文章內容，編輯的方式是採用Markdown輕量級標記語言，教學可以參考<a href="https://markdown.tw/" target="_blank"><strong><code>Markdown文件</code></strong></a>，這裡有個要比較注意的地方是，請將 <strong><code>draft: true</code></strong> 修改為 <strong><code>draft: false</code></strong> ，如下圖，修改 <strong><code>draft</code></strong> 的用意是要讓生成器知道這篇文章不是草稿，這樣在後續生成文件後，運行服務才可以看到我們剛剛新增的這篇文章，當然若不修改也是可以的，只是等等要運行服務時，運行的指令要多指定一個參數，才會將草稿給生成出來。<br />
 緊接著就是編輯完內容後，就可以存檔了。<br />
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/HugoPostEditor.png" alt="Hugo" title="編輯Demo.md示範" /><br />
+<img src="https://coreychen71.github.io/images/Develop/2019051101/HugoPostEditor.png" alt="Hugo" title="編輯Demo.md示範" /><br />
 編輯好文章後，一樣要進行生成的動作，再將本地服務運行起來，就可以看到剛剛新新的文章了。</p>
 
 <h6 id="進行生成">進行生成</h6>
@@ -540,7 +540,7 @@ config.toml預設值就像下圖，一開始只有3個設定值<br />
 <h6 id="開啟我們剛重新生成的網站">開啟我們剛重新生成的網站</h6>
 
 <p>剛剛我們新增的文章已經出現在網站裡了。
-<img src="https://coreychen71.github.io/img/post/Develop/2019051101/HugoNewPostDemo.png" alt="WebDemo" title="NewPostDemo" /></p>
+<img src="https://coreychen71.github.io/images/Develop/2019051101/HugoNewPostDemo.png" alt="WebDemo" title="NewPostDemo" /></p>
 
 <hr />
 

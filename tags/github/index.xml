@@ -12,11 +12,27 @@
     
     <item>
       <title>將網站部署至GitHub Page</title>
-      <link>https://coreychen71.github.io/post/develop/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/</link>
+      <link>https://coreychen71.github.io/posts/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/</link>
       <pubDate>Wed, 15 May 2019 20:56:40 +0800</pubDate>
       
-      <guid>https://coreychen71.github.io/post/develop/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/</guid>
-      <description>GitHub簡介 GitHub是透過Git進行版本控制的軟體原始碼代管服務平台，它有免費和付費二種，若您希望您放在GitHub上的專案能設成Private，那就要付費，因為免費用戶的專案都只能為Public，GitHub裡面的專案均可以透過標準的Git命令進行存取和操作，所有的Git命令都可以用到Gi</description>
+      <guid>https://coreychen71.github.io/posts/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/</guid>
+      <description>GitHub簡介 GitHub是透過Git進行版本控制的軟體原始碼代管服務平台，它有免費和付費二種，若您希望您放在GitHub上的專案能設成Private，那就要付費，因為免費用戶的專案都只能為Public，GitHub裡面的專案均可以透過標準的Git命令進行存取和操作，所有的Git命令都可以用到GitHub專案上面。GitHub針對Windows和macOS二個平台開發了桌面用戶端，也能使用第三方外掛程式來實現Git功能。GitHub通常用於軟體開發，GitHub Pages則支援用戶透過Repository建立 靜態網站 或 靜態部落格，今天示範的就是要透過Git將建置好的部落格部署到GitHub Pages。
+申請GitHub帳號 在使用GitHub之前，當然就要是申請一個GitHub帳號，若您已經申請過了，那您就可以直接跳往後續的步驟。
+ 請點選GitHub，連結至官網，點選SignUp進行註冊
+ 建立帳號
+ UserName：使用者名稱 EMail Address：電子郵件信箱 Password：密碼
+  若無誤，則每個欄位會出現綠色小箭頭，接者將Verify Account確認完後，就可以點下方的 Create an account進入Step2。
+ 選擇訂閱
+這邊選擇Unlimited pubilc repositores for free(免費方案)，接下來的項目勾選則是給組織用戶勾選的，不管它，直接按Continue進入Step3。
+ 量身訂制您的體驗
+內容就是一些基本的問卷填寫，請依自己的需求勾選後，按下Submit。
+ 信箱驗證
+請至剛剛申請註冊的電子郵件信箱收取GitHub發的驗證信件，並完成帳號驗證程序，完成驗證後就直連進GitHub登入的畫面，這時可以直接點進 Your profile。
+  建立Repository 點選Repositories，再點擊右邊的 New 來建立一個新的程式庫。
+進入Create a new repository畫面後，請輸入建立GitHub Page的資料。
+ Owner : 這裡已設定好是使用者名稱。 Repository name : 請輸入 [您申請的GitHub帳號] + .github.io。 Description : 相關描述。
+  建立完成就會跳轉至下面畫面
+開始部署網站 首先要複製剛才建好的Repository Git網址，點選下圖箭頭所指的按鈕就可以複製了。</description>
     </item>
     
   </channel>

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<title>
+	靜態網站產生器介紹
+</title>
+		<style>
+	body, body.pushable {
+		background-repeat: no-repeat;
+	  	background-attachment: fixed;
+	  	background-size: cover !important;
+	}
+</style>
+
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+	
+	
+	
+	<meta name="author" content="Corey Chen" />
+	<meta name="description" content="靜態？動態？ 在介紹靜態網頁框架之前，先稍微了解網頁主要有二種型態，就是分為靜態和動態。
+靜態網頁 靜態網頁指的是沒有包含動畫(Flash動畫或Gif動畫)的純文字及圖片網頁，當然也不包含網頁程式(如ASP、PHP、ASP.Net…等)與資料庫的純文字及圖片網頁。
+動態網頁 動態網頁則指包含Flash動畫或Gif動畫的網頁，或是包含網頁程式及資料庫的網頁，透過程式語言結合資料庫的方式，進而設計出可與網友進行互動的功能。 例如：購物車、會員機制、留言板、討論區、投票區、訊息發佈、商品發佈…等等。
+為何選靜態的方式來建置Blog？ 當然就是因為它不需要後端程式與資料庫，速度又快，版面設計不受限，又能把部落格放在GitHub Page，而且能直接使用Markdown輕量級標記式語言來進行撰寫，撰寫的文章也能納入版控，所以自然成為我的首選！
+現在就有許多人都開始採用這樣的方式來建置自己的部落格，當然您也可以採用另一種方式，就是透過免費平台來進行，例如WordPress、痞客邦、點部落等等&amp;hellip;
+至於到底該採用那種方式，沒有標準答案，只要適合自己，符合切身的需求，都是一個好選擇！
+目前主流的靜態產生器有那些？ 目前較主流的產生器有下面四種，不過基本上，前三種比較多人在使用，所以後面的介紹，我只會以前三種來做介紹。
+ Jekyll
+ Hexo
+ Hugo
+ Middleman
+  Jekyll Jekyll是基於RubyGem的解析引擎，能夠將樣板、liquid 語言、markdown 轉換為靜態網頁的產生器。
+Jekyll 優點  免費和開源。
+ 簡單易用。
+ 自帶默認主題，安裝後即可使用。 豐富的插件。   Jekyll 缺點  隨著網站內容的增長，構建過程變得非常慢。 較多插件都已過時。
+  Hugo Hugo是用Go語言構建的靜態網站生成器，它宣稱為世界上最快的網站構建框架。
+它可以在不到幾秒鐘的時間內安裝好Hugo，並在很短的時間內構建好一個靜態網站。
+Hugo 優點  安裝簡易。 超快的速度，引擎和速度優化。
+ 頁面生成效率高，幾乎是瞬間完成。
+  Hugo 缺點  主題使用Go模板，需要熟悉Go語言才能創建主題。 未附帶默認主題，主題選擇性較少。 插件資源較不足。   Hexo Hexo是基於Node.js的靜態網站生成器，Hexo是一個快速、簡單且強大的網誌框架。 Hexo使用Markdown（或其他渲染引擎）解析您的文章，並在幾秒鐘內，生成數百個靜態文件並透過漂亮的主題產生靜態檔案。" />
+
+
+
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+
+
+
+		
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+
+ <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Inconsolata" rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/site.css">
+
+
+
+	<link rel="stylesheet" type="text/css" href="/css/highlight.css">
+
+
+
+
+	
+		<link rel="stylesheet" type="text/css" href="/css/highlight.css">
+	
+
+
+
+<style>
+	body.pushable {
+		display: block;
+		
+			background-image: var(--bgImage) !important;
+		 ;
+	}
+</style>
+
+
+
+<script>
+	
+	var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+	console.log("The client device is a "+(isMobile?"mobile":"PC")+".")
+</script>
+
+	</head>
+
+	<body>
+		<script>
+var prevBgIndex = 0;
+var bodyBgSwitchIndex = 0;
+
+
+
+
+
+
+	
+		var gradients = [
+		  [],
+		  ['#40e0d0', '#ff8c00', '#ff0080'], 
+		  ['#3e5151', '#decba4'], 
+		  ['#11998e', '#38ef7d'], 
+		  ['#108dc7', '#ef8e38'], 
+		  ['#fc5c7d', '#6a82fb'], 
+		  ['#fc466b', '#3f5efb'], 
+		  ['#c94b4b', '#4b134f'], 
+		  ['#23074d', '#cc5333'] 
+		];
+		var randomBgColor = gradients[getRandomInt(0, gradients.length)].join(", ");
+		var backgroundProperty = 'linear-gradient(to right, ' + randomBgColor + ')';
+		document.body.style.background = backgroundProperty;
+	
+
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  var random;
+  while (1) {
+    random = Math.floor(Math.random() * (max - min)) + min;
+    if (random !== prevBgIndex) {
+      prevBgIndex = random;
+      break;
+    }
+  }
+  return random;
+}
+</script>
+
+
+
+
+		<div id="sidebar" class="ui sidebar inverted vertical menu">
+	
+	<section id="author" class="ui top attached center aligned inverted segment">
+		
+<div class="ui small circular image">
+	
+		<img src="/images/coreychen.png">
+	
+</div>
+
+
+<h3 class="ui header">
+	Corey Chen
+	<div class="sub header">I&#39;m not best, but I&#39;m trying my best.</div>
+</h3>
+
+	</section>
+
+	
+	
+		<section class="ui attached center aligned inverted segment sidebar-dream-tags">
+			
+			
+			
+			
+
+
+
+
+	
+	
+		
+			
+			<a class="ui label yellow " href="/tags/hugo" title="hugo">hugo</a>
+		
+			
+			<a class="ui label blue " href="/tags/analytics" title="analytics">analytics</a>
+		
+			
+			<a class="ui label teal " href="/tags/disqus" title="disqus">disqus</a>
+		
+			
+			<a class="ui label teal " href="/tags/github" title="github">github</a>
+		
+			
+			<a class="ui label orange " href="/tags/windows10" title="windows10">windows10</a>
+		
+			
+			<a class="ui label brown " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
+		
+			
+			<a class="ui label pink " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
+		
+	
+
+
+		</section>
+	
+
+	
+	
+		<section class="ui attached inverted segment sidebar-dream-categories both flexbox">
+			<div class="ui inverted accordion">
+				
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/blog">blog</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/hugoadddisqus/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Hugo 加入 Disqus 整合性留言管理系統</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/hugoaddgoogleanalytics/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Hugo 加入 Google Analytics</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>將網站部署至GitHub Page</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E7%BD%AE%E7%B6%B2%E7%AB%99/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>如何使用Hugo建置網站</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>靜態網站產生器介紹</p>
+				</div>
+			</a>
+		
+	</div>
+
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/windows">windows</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/windows10_upgrade_1903_and_sandbox/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Windows 10 升級 1903 與開啟沙箱功能</p>
+				</div>
+			</a>
+		
+	</div>
+
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B">心情記事</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%BA%8F%E7%AB%A0/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>序章</p>
+				</div>
+			</a>
+		
+	</div>
+
+
+			</div>
+		</section>
+	
+
+	
+	<section id="footer" class="ui bottom attached center aligned inverted segment">
+		
+
+	<p>© 2019 Corey Chen&#39;s Blog</p>
+
+
+<p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p>
+
+	</section>
+</div>
+
+
+		<div class="pusher">
+			<div class="flipper">
+				<div class="front">
+					
+	<nav class="ui top secondary menu bar">
+	
+	<div class="item">
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
+	</div>
+
+	
+	
+		<div class="item">
+			<a href="/">
+				<i class="inverted big link home icon" title="Home"></i>
+			</a>
+		</div>
+	
+
+	
+	
+
+	
+	
+		<div class="item">
+			<a href="/tags">
+				<i class="inverted big link tags icon" title="All Tags"></i>
+			</a>
+		</div>
+	
+
+	
+	
+		<div class="item">
+			<a href="/categories">
+				<i class="inverted big link cubes icon" title="All Categories"></i>
+			</a>
+    	</div>
+	
+
+	
+	
+
+	
+	
+		<div class="ui container tablet computer only grid">
+			<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
+				<i class="inverted big link sidebar icon" title="Show Sidebar"></i>
+			</div>
+		</div>
+	
+
+	
+	
+		<div class="item right">
+			<a href="/posts/index.xml">
+				<i class="inverted big link rss icon" title="RSS Feed"></i>
+			</a>
+		</div>
+	
+</nav>
+
+
+	<div class="ui centered grid">
+		
+		<div class="sixteen wide mobile only column">
+				<div class="ui inverted accordion">
+	<div id="header" class="ui inverted segment column box">		
+		
+		<header id="author" class="ui top attached center aligned inverted segment">
+			
+<div class="ui small circular image">
+	
+		<img src="/images/coreychen.png">
+	
+</div>
+
+
+<h3 class="ui header">
+	Corey Chen
+	<div class="sub header">I&#39;m not best, but I&#39;m trying my best.</div>
+</h3>
+
+		</header>
+
+		
+		<div class=" title header-title">
+			
+				<div id="tag-category-pop" class="ui red right corner label">
+					<i class="hand point icon down" title="Show/hide tags and categories"></i>
+				</div>
+			
+		</div>
+		
+		
+		<div id="tag-category" class=" content">
+			
+				<section class="ui attached center aligned inverted segment dream-tags none flexbox">
+					
+					
+					
+
+
+
+
+	
+	
+		
+			
+			<a class="ui label brown " href="/tags/hugo" title="hugo">hugo</a>
+		
+			
+			<a class="ui label blue " href="/tags/analytics" title="analytics">analytics</a>
+		
+			
+			<a class="ui label purple " href="/tags/disqus" title="disqus">disqus</a>
+		
+			
+			<a class="ui label brown " href="/tags/github" title="github">github</a>
+		
+			
+			<a class="ui label purple " href="/tags/windows10" title="windows10">windows10</a>
+		
+			
+			<a class="ui label yellow " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
+		
+			
+			<a class="ui label violet " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
+		
+	
+
+
+				</section>
+			
+
+			
+				<section class="ui attached inverted segment dream-categories both flexbox">
+					<div class="inverted accordion">
+						
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/blog">blog</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/hugoadddisqus/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Hugo 加入 Disqus 整合性留言管理系統</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/hugoaddgoogleanalytics/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Hugo 加入 Google Analytics</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>將網站部署至GitHub Page</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E7%BD%AE%E7%B6%B2%E7%AB%99/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>如何使用Hugo建置網站</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>靜態網站產生器介紹</p>
+				</div>
+			</a>
+		
+	</div>
+
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/windows">windows</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/windows10_upgrade_1903_and_sandbox/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Windows 10 升級 1903 與開啟沙箱功能</p>
+				</div>
+			</a>
+		
+	</div>
+
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B">心情記事</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%BA%8F%E7%AB%A0/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>序章</p>
+				</div>
+			</a>
+		
+	</div>
+
+
+					</div>
+				</section>
+			
+		</div>
+
+		
+		<footer class="ui bottom attached center aligned inverted segment">
+			
+
+	<p>© 2019 Corey Chen&#39;s Blog</p>
+
+
+<p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p>
+
+		</footer>
+	</div>
+</div>
+
+		</div>
+
+		<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
+			
+			<section class="ui secondary top attached black segment post-head">
+				<h1 class="post-title">
+					靜態網站產生器介紹
+				</h1>
+
+				<div class="sub header">
+					<div><span><i class="calendar outline icon"></i>May 7, 2019</span></div>
+					
+					<div><span class="disqusComment"><i class="comment outline icon"></i><a href="https://coreychen71.github.io/posts/2019-05/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9/#disqus_thread" class="disqus-comment-count" data-disqus-identifier="575d4a1838d4a999d1f54fbb0695fbb4"></a></span></div>
+					<div><span><i class="clock outline icon"></i>1 min read</span></div>
+					<div><span><i class="angle double up icon"></i>Last updated on May 7, 2019</span></div>
+				</div>
+				<hr>
+
+				
+					<div class="toc">
+						<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#靜態-動態"><strong>靜態？動態？</strong></a>
+<ul>
+<li>
+<ul>
+<li><a href="#靜態網頁">靜態網頁</a></li>
+<li><a href="#動態網頁">動態網頁</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#為何選靜態的方式來建置blog">為何選靜態的方式來建置Blog？</a></li>
+<li><a href="#目前主流的靜態產生器有那些">目前主流的靜態產生器有那些？</a></li>
+<li><a href="#jekyll">Jekyll</a>
+<ul>
+<li>
+<ul>
+<li><a href="#jekyll-優點">Jekyll 優點</a></li>
+<li><a href="#jekyll-缺點">Jekyll 缺點</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#hugo">Hugo</a>
+<ul>
+<li>
+<ul>
+<li><a href="#hugo-優點">Hugo 優點</a></li>
+<li><a href="#hugo-缺點">Hugo 缺點</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#hexo">Hexo</a>
+<ul>
+<li>
+<ul>
+<li><a href="#hexo-優點">Hexo 優點</a></li>
+<li><a href="#hexo-缺點">Hexo 缺點</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#靜態網站產生器的比較圖">靜態網站產生器的比較圖</a></li>
+<li><a href="#結論">結論</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#後續的部落格建置教學-將會以hugo為主">後續的部落格建置教學，將會以Hugo為主。</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+					</div>
+				
+
+				<article class="post-content twemoji">
+					
+
+<h3 id="靜態-動態"><strong>靜態？動態？</strong>&nbsp;<a class="anchor" href="#靜態-動態"><i class="small linkify icon"></i></a> </h3>
+
+<p>在介紹靜態網頁框架之前，先稍微了解網頁主要有二種型態，就是分為<code>靜態</code>和<code>動態</code>。</p>
+
+<h5 id="靜態網頁">靜態網頁&nbsp;<a class="anchor" href="#靜態網頁"><i class="small linkify icon"></i></a> </h5>
+
+<p>靜態網頁指的是沒有包含動畫(Flash動畫或Gif動畫)的純文字及圖片網頁，當然也不包含網頁程式(如ASP、PHP、ASP.Net…等)與資料庫的純文字及圖片網頁。</p>
+
+<h5 id="動態網頁">動態網頁&nbsp;<a class="anchor" href="#動態網頁"><i class="small linkify icon"></i></a> </h5>
+
+<p>動態網頁則指包含Flash動畫或Gif動畫的網頁，或是包含網頁程式及資料庫的網頁，透過程式語言結合資料庫的方式，進而設計出可與網友進行互動的功能。
+例如：購物車、會員機制、留言板、討論區、投票區、訊息發佈、商品發佈…等等。</p>
+
+<h3 id="為何選靜態的方式來建置blog">為何選靜態的方式來建置Blog？&nbsp;<a class="anchor" href="#為何選靜態的方式來建置blog"><i class="small linkify icon"></i></a> </h3>
+
+<p>當然就是因為它不需要後端程式與資料庫，速度又快，版面設計不受限，又能把部落格放在GitHub Page，而且能直接使用Markdown輕量級標記式語言來進行撰寫，撰寫的文章也能納入版控，所以自然成為我的首選！<br />
+現在就有許多人都開始採用這樣的方式來建置自己的部落格，當然您也可以採用另一種方式，就是透過免費平台來進行，例如<a href="https://zh-tw.wordpress.com" target="_blank">WordPress</a>、<a href="https://www.pixnet.net/" target="_blank">痞客邦</a>、<a href="https://dotblogs.com.tw/" target="_blank">點部落</a>等等&hellip;<br />
+至於到底該採用那種方式，沒有標準答案，只要適合自己，符合切身的需求，都是一個好選擇！</p>
+
+<h3 id="目前主流的靜態產生器有那些">目前主流的靜態產生器有那些？&nbsp;<a class="anchor" href="#目前主流的靜態產生器有那些"><i class="small linkify icon"></i></a> </h3>
+
+<p>目前較主流的產生器有下面四種，不過基本上，前三種比較多人在使用，所以後面的介紹，我只會以前三種來做介紹。</p>
+
+<ul>
+<li><a href="https://jekyllrb.com/" target="_blank">Jekyll</a><br /></li>
+<li><a href="https://hexo.io/zh-tw/" target="_blank">Hexo</a><br /></li>
+<li><a href="https://gohugo.io/" target="_balnk">Hugo</a><br /></li>
+<li><a href="https://middlemanapp.com/" target="_balnk">Middleman</a><br />
+<br /></li>
+</ul>
+
+<h3 id="jekyll">Jekyll&nbsp;<a class="anchor" href="#jekyll"><i class="small linkify icon"></i></a> </h3>
+
+<p><img src="/images/Develop/2019050701/Jekyll.png" alt="Jekyll" /><br />
+Jekyll是基於<a href="https://www.ruby-lang.org/zh_tw/" target="_blank">Ruby</a>Gem的解析引擎，能夠將樣板、liquid 語言、markdown 轉換為<strong><code>靜態網頁</code></strong>的產生器。</p>
+
+<h5 id="jekyll-優點">Jekyll 優點&nbsp;<a class="anchor" href="#jekyll-優點"><i class="small linkify icon"></i></a> </h5>
+
+<ul>
+<li>免費和開源。<br /></li>
+<li>簡單易用。<br /></li>
+<li>自帶默認主題，安裝後即可使用。</li>
+<li>豐富的插件。
+<br /></li>
+</ul>
+
+<h5 id="jekyll-缺點">Jekyll 缺點&nbsp;<a class="anchor" href="#jekyll-缺點"><i class="small linkify icon"></i></a> </h5>
+
+<ul>
+<li>隨著網站內容的增長，構建過程變得非常慢。</li>
+<li>較多插件都已過時。<br /></li>
+</ul>
+
+<hr />
+
+<h3 id="hugo">Hugo&nbsp;<a class="anchor" href="#hugo"><i class="small linkify icon"></i></a> </h3>
+
+<p><img src="/images/Develop/2019050701/HUGO.png" alt="Hugo" /><br />
+Hugo是用Go語言構建的靜態網站生成器，它宣稱為<strong><code>世界上最快的網站構建框架</code></strong>。<br />
+它可以在不到幾秒鐘的時間內安裝好Hugo，並在很短的時間內構建好一個靜態網站。</p>
+
+<h5 id="hugo-優點">Hugo 優點&nbsp;<a class="anchor" href="#hugo-優點"><i class="small linkify icon"></i></a> </h5>
+
+<ul>
+<li>安裝簡易。</li>
+<li>超快的速度，引擎和速度優化。<br /></li>
+<li>頁面生成效率高，幾乎是瞬間完成。<br />
+<br /></li>
+</ul>
+
+<h5 id="hugo-缺點">Hugo 缺點&nbsp;<a class="anchor" href="#hugo-缺點"><i class="small linkify icon"></i></a> </h5>
+
+<ul>
+<li>主題使用Go模板，需要熟悉Go語言才能創建主題。</li>
+<li>未附帶默認主題，主題選擇性較少。</li>
+<li>插件資源較不足。
+<br /></li>
+</ul>
+
+<hr />
+
+<h3 id="hexo">Hexo&nbsp;<a class="anchor" href="#hexo"><i class="small linkify icon"></i></a> </h3>
+
+<p><img src="/images/Develop/2019050701/Hexo.png" alt="Hexo" /><br />
+Hexo是基於<a href="https://nodejs.org/en/" target="_blank"> Node.js</a>的靜態網站生成器，Hexo是一個快速、簡單且強大的網誌框架。  Hexo使用Markdown（或其他渲染引擎）解析您的文章，並在幾秒鐘內，生成數百個靜態文件並透過漂亮的主題產生靜態檔案。</p>
+
+<h5 id="hexo-優點">Hexo 優點&nbsp;<a class="anchor" href="#hexo-優點"><i class="small linkify icon"></i></a> </h5>
+
+<ul>
+<li>自帶默認主題，安裝後即可使用。</li>
+<li>速度快，Node.js帶給您超快的檔案產生速度，上百個檔案只需幾秒就能建立完成。</li>
+<li>豐富的主題與插件。</li>
+<li>官方有中文說明文件</li>
+<li>Hexo 有強大的外掛系統，您可安裝外掛讓 Hexo 支援 Jade, CoffeeScript。<br />
+<br /></li>
+</ul>
+
+<h5 id="hexo-缺點">Hexo 缺點&nbsp;<a class="anchor" href="#hexo-缺點"><i class="small linkify icon"></i></a> </h5>
+
+<ul>
+<li>Hexo有一個相對較大的社區，但大多數是非英語人士(來自中國)。</li>
+<li>錯綜複雜的npm生態。<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h3 id="靜態網站產生器的比較圖">靜態網站產生器的比較圖&nbsp;<a class="anchor" href="#靜態網站產生器的比較圖"><i class="small linkify icon"></i></a> </h3>
+
+<p>下方為2019<strong><code>StackShare</code></strong>的比較圖，資料來源請參考<a href="https://stackshare.io/stackups/hexo-vs-hugo_2-vs-jekyll" target="_blank">Jekyll vs Hexo vs Hugo 2019 Comparison of Static Site Generators</a>
+<img src="/images/Develop/2019050701/Jekyll-Hugo-Hexo_VS.png" alt="StackShare" /></p>
+
+<hr />
+
+<h3 id="結論">結論&nbsp;<a class="anchor" href="#結論"><i class="small linkify icon"></i></a> </h3>
+
+<p>其實我是覺得三種都各有各的特色與資源，若您仍在猶豫不決，我覺得其實可以花些許時間，三種都試試看，畢竟這三種環境上的建置與安裝並不困難，尤其以Hugo最為簡單，自己全都試過一次，選一個自己最順手的來用就好。<br />
+最後我自己是選擇Hugo來創建部落格，會選擇它是考量到我會在雙平台（Windows、macOS）上使用，除了它的環境建置是三者中最簡便的之外，也是看上它飛快的構建速度，而且我未接觸過Hugo，Jekyll和Hexo先前都有建置過了，只是當時並未發佈到GitHub上，僅僅只是在本機上運行並套用不同主題玩玩而已，所以最後決定採用Hugo。</p>
+
+<h6 id="後續的部落格建置教學-將會以hugo為主">後續的部落格建置教學，將會以Hugo為主。&nbsp;<a class="anchor" href="#後續的部落格建置教學-將會以hugo為主"><i class="small linkify icon"></i></a> </h6>
+
+				</article>				
+			</section>
+
+			
+			<section class="ui secondary attached segment dream-tags">
+				
+					
+
+
+
+
+	
+		<a class="ui label green " href="/tags/hugo" title="Hugo">Hugo</a>
+	
+
+
+				
+			</section>
+
+			
+			
+				<section class="ui secondary  attached segment share row box">
+					
+
+
+
+
+
+
+
+
+<div class="author">
+	
+	<img class="avatar" src="/images/coreychen.png">
+	
+</div>
+<div class="info grow flexbox">
+	<a href="https://twitter.com/coreychen71">
+	<p class="name">Corey Chen</p>
+	</a>
+	<p class="desc">I&#39;m not best, but I&#39;m trying my best.</p>
+</div>
+
+
+<section class="buttons row box">
+	<div class="facebook none flexbox" href="#" onclick="window.open(
+			'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+			'facebook-share-dialog',
+			'width=626,height=436'); return false;">
+		<button class="ui facebook button"><i class="facebook icon"></i>Share</button>
+	</div>
+	<div class="twitter none flexbox" onclick="window.open('https://twitter.com/intent/tweet?text=Read &quot;靜態網站產生器介紹 &quot; by @coreychen71 https:\/\/coreychen71.github.io\/posts\/2019-05\/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9\/','_self')">
+		<button class="ui twitter button"><i class="twitter icon"></i>Tweet</button>
+	</div>
+</section>
+
+				</section>
+			
+
+			
+			
+			
+
+			
+			
+				<div class="ui secondary bottom attached stacked segment disqus">
+					
+<div id="disqus_thread"></div>
+<script>
+	var disqus_config = function () {
+		this.page.url = 'https:\/\/coreychen71.github.io\/posts\/2019-05\/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9\/';
+		this.page.identifier = '575d4a1838d4a999d1f54fbb0695fbb4';
+	};
+	(function() {
+   	var d = document, s = d.createElement('script');
+   	s.src = 'https://' + 'coreychen71' + '.disqus.com/embed.js';
+   	s.setAttribute('data-timestamp', +new Date());
+   	(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+				</div>
+			
+		</div>
+	</div>
+
+				</div>
+				<div class="back">
+					
+<nav class="ui top secondary menu bar">
+	<div class="item">
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
+	</div>
+	
+		
+	
+		
+	
+		
+	
+		
+	
+
+	
+	
+	
+	
+	
+	
+	
+		
+		
+			<div class="item">
+				<a href="https://github.com/coreychen71" target="	_blank">
+					<i id="ico" class="inverted big link github icon" title="GitHub"></i>
+				</a>
+			</div>
+		
+	
+		
+		
+			<div class="item">
+				<a href="mailto:coreychen71@gmail.com" target="	_blank">
+					<i id="ico" class="inverted big link mail icon" title="Email"></i>
+				</a>
+			</div>
+		
+	
+		
+		
+			<div class="item">
+				<a href="https://twitter.com/coreychen71" target="	_blank">
+					<i id="ico" class="inverted big link twitter icon" title="Twitter"></i>
+				</a>
+			</div>
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+</nav>
+
+
+
+<div class="ui centered grid about">
+	<div class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
+		<section class="ui stacked segments">
+			<div class="ui inverted segment">
+				<article class="twemoji">
+					<p><head>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/v4-shims.js"></script>
+</head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"></p>
+
+<h1 id="about-me">About Me</h1>
+
+<p>Hi, my name is Corey Chen, I am currently dedicated to C# development.<br />
+Usually in the company is mainly responsible for the development of WinForm, and sometimes the development of WEB and Report.<br />
+I believe that on the road of development, only continuous learning can have continuous driving force.<br />
+So I want to use this blog to record problems encountered during development and learn new technologies.<br />
+Please feel free to contact me if you have any comments.</p>
+
+<hr />
+
+<h1 id="關於我">關於我</h1>
+
+<p>嗨，我的名字是 Corey Chen，我目前致力於 C# 開發。<br />
+通常在公司主要負責 WinForm 的開發，有時還會開發 WEB 和 Report。<br />
+我相信，在開發的道路上，只有不斷學習才能有持續的動力。<br />
+所以我想用這個部落格記錄開發過程中遇到的問題並學習新技術。<br />
+如果您有任何意見，請隨時與我聯繫。</p>
+
+<p><a class="btn btn-default btn-sm" target="_blank" href="https://github.com/coreychen71">
+    <i class="fab fa-github fa-2x"></i>
+</a>
+<a class="btn btn-default btn-sm" target="_blank" href="https://www.facebook.com/coreychen0723">
+    <i class="fab fa-facebook-square fa-2x"></i>
+</a>
+<a class="btn btn-default btn-sm" target="_blank" href="https://twitter.com/coreychen71">
+    <i class="fab fa-twitter fa-2x"></i>
+</a>
+<a class="btn btn-default btn-sm" target="_blank" href="https://instagram.com/coreychen71">
+    <i class="fab fa-instagram fa-2x"></i>
+</a>
+<a class="btn btn-default btn-sm" target="_blank" href="mailto:coreychen71@gmail.com">
+    <i class="far fa-envelope-open fa-2x"></i>
+</a></p>
+
+				</article>
+			</div>
+		</section>
+	</div>
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+	
+	
+		<script id="dsq-count-scr" src="//coreychen71.disqus.com/count.js" async></script>
+	
+
+		
+
+<script src="/js/site.js"></script>
+
+
+
+	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
+
+
+
+
+
+
+
+
+	
+	<script>
+		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+		ga('create', 'UA-139621109-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+		
+
+
+		
+
+	<script>
+		(function () {
+		  console.log("Twemoji up and making stuff colourful!");
+		  for (var b = document.getElementsByClassName("twemoji"), a = 0; a < b.length; a++) {
+			twemoji.parse(b[a]);
+		  }
+		})();
+	</script>
+
+
+	</body>
+</html>

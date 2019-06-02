@@ -12,11 +12,19 @@
     
     <item>
       <title>Windows 10 升級 1903 與開啟沙箱功能</title>
-      <link>https://coreychen71.github.io/post/develop/2019-05/windows10_upgrade_1903_and_sandbox/</link>
+      <link>https://coreychen71.github.io/posts/2019-05/windows10_upgrade_1903_and_sandbox/</link>
       <pubDate>Thu, 23 May 2019 21:27:00 +0800</pubDate>
       
-      <guid>https://coreychen71.github.io/post/develop/2019-05/windows10_upgrade_1903_and_sandbox/</guid>
-      <description>Windows 10 May 2019 Update Windows 10 1903 在 2019/05/22 正式上線了！ Windows 10 使用者，可以透過「設定」-&amp;gt;「更新和安全性」-&amp;gt;「Windows Update」，選擇「檢查更新」後，看是否有 Windows 10 1903 的更新訊息。因為並不是每位 Windows 10 使用者，都可以選擇立即下載並安裝Windows10 1903。因為上一次 Windows 10 1809 更新後，許多電腦出現各式各樣的 B</description>
+      <guid>https://coreychen71.github.io/posts/2019-05/windows10_upgrade_1903_and_sandbox/</guid>
+      <description>Windows 10 May 2019 Update Windows 10 1903 在 2019/05/22 正式上線了！
+Windows 10 使用者，可以透過「設定」-&amp;gt;「更新和安全性」-&amp;gt;「Windows Update」，選擇「檢查更新」後，看是否有 Windows 10 1903 的更新訊息。因為並不是每位 Windows 10 使用者，都可以選擇立即下載並安裝Windows10 1903。因為上一次 Windows 10 1809 更新後，許多電腦出現各式各樣的 Bug，導致大規模系統當機的問題，這次微軟採用一邊釋出更新，一邊蒐集資訊和使用者意見的方式，逐步推出 Windwos 10 1903。
+手動升級方式 當然若是等不及，想要先行升級至1903的話，也是可以透過其它方式來進行升級&amp;hellip;
+ 下載 Windows 10 1903 ISO 檔 透過 Windows 更新小幫手   這邊會介紹如何透過 Windows 更新小幫手來進行升級，若您之前已經有裝過 Windows 更新小幫手，也請您再從新下載一次再進行升級，不然若是使用舊的 Windows 更新小幫手，一樣也是看不到 1903 更新的。
+Windows 10 更新小幫手的下載位址請參照右側連結 Windows 10 更新小幫手，點選「立即更新」即可下載。
+下載完，請執行 Windows 更新小幫手，就可以看到1903的更新，按下立即更新
+等它檢查完相容性，按下一步，接著就等它進行下載和升級
+升級完成並重開機進到系統後，請在左下方的搜尋列輸入下述指令，即可看到 Windwos 現行的版本，這樣就完成1903的升級了。
+1  winver   開啟 Windows 沙箱功能 什麼是 Windows 沙箱？ 沙箱(Windows Sandbox)模式，是一種將程式執行環境限制在一個獨立的執行區域，當該執行環境整個弄垮，也不會影響到其它程式或整個系統。微軟表示「這個輕量化桌面環境，能在隔離環境下，讓使用者安全執行應用程式」。</description>
     </item>
     
   </channel>

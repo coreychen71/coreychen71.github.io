@@ -21,12 +21,7 @@
 	
 	
 	<meta name="author" content="Corey Chen" />
-	<meta name="description" content="Google Analytics Google Analytics，一般都會簡稱GA，是由 Google 所提供的數據分析工具，可用來分析網站或 APP 的數據使用狀況（只是目前仍使用在網站數據分析居多），由於使用 Google 搜尋引擎的人數比例將近超過80%，所以大家自然地對於 GA 的數據準確度也有比較高的信任度。GA 基本版是完全免費的，基本版的功能已經完全足夠中小型網站使用了，只有數據量較大或是有其他更多需求的企業網站才會需要使用到進階版GA 360（原名 : GA Premium）。
-使用 GA 的好處  了解使用者是透過怎樣的方式進入網站 了解進入網站的目標對象 觀察使用者進入網站後的行為流程   所以若是您也希望您的 Hugo 網站能夠透過 GA 來分析使用上的數據，享受 GA 所帶來的上述好處，可以去申請 GA ，再將 GA 加到自己的 Blog 裡，至於要如何申請 GA 功能，這邊就不再特地撰述了，想了解如何申請的人，可以參考 翔說什麼 的教學文章。
-👉 GA 帳號申請、GA設定、GA驗證，3個步驟一次說明
-在 Hugo 上啟用 GA 當你申請好 GA 服務並已拿到 GA 追蹤碼，接著就可以開始著手把 GA 加入到您的 Hugo 網站。
-Hugo 官方的內部模板說明文件 👉 Internal Templates 有提到 Google Analytics 的使用方式。
-首先必需在網站的全域配置檔，設置剛剛申請的 GA 追蹤碼，開啟 Hugo 網站根目錄的 Config." />
+	<meta name="description" content="教您如何將 Google Analytics 加入您的 Hugo 網站" />
 
 
 
@@ -168,22 +163,22 @@ function getRandomInt(min, max) {
 			<a class="ui label blue " href="/tags/hugo" title="hugo">hugo</a>
 		
 			
-			<a class="ui label blue " href="/tags/analytics" title="analytics">analytics</a>
+			<a class="ui label violet " href="/tags/analytics" title="analytics">analytics</a>
 		
 			
-			<a class="ui label green " href="/tags/disqus" title="disqus">disqus</a>
+			<a class="ui label teal " href="/tags/disqus" title="disqus">disqus</a>
 		
 			
-			<a class="ui label violet " href="/tags/github" title="github">github</a>
+			<a class="ui label purple " href="/tags/github" title="github">github</a>
 		
 			
-			<a class="ui label pink " href="/tags/windows10" title="windows10">windows10</a>
+			<a class="ui label red " href="/tags/windows10" title="windows10">windows10</a>
 		
 			
-			<a class="ui label red " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
+			<a class="ui label violet " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
 		
 			
-			<a class="ui label teal " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
+			<a class="ui label olive " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
 		
 	
 
@@ -405,25 +400,25 @@ function getRandomInt(min, max) {
 	
 		
 			
-			<a class="ui label olive " href="/tags/hugo" title="hugo">hugo</a>
+			<a class="ui label pink " href="/tags/hugo" title="hugo">hugo</a>
 		
 			
-			<a class="ui label yellow " href="/tags/analytics" title="analytics">analytics</a>
+			<a class="ui label pink " href="/tags/analytics" title="analytics">analytics</a>
 		
 			
-			<a class="ui label brown " href="/tags/disqus" title="disqus">disqus</a>
+			<a class="ui label blue " href="/tags/disqus" title="disqus">disqus</a>
 		
 			
-			<a class="ui label orange " href="/tags/github" title="github">github</a>
+			<a class="ui label yellow " href="/tags/github" title="github">github</a>
 		
 			
-			<a class="ui label violet " href="/tags/windows10" title="windows10">windows10</a>
+			<a class="ui label teal " href="/tags/windows10" title="windows10">windows10</a>
 		
 			
-			<a class="ui label brown " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
+			<a class="ui label violet " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
 		
 			
-			<a class="ui label yellow " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
+			<a class="ui label green " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
 		
 	
 
@@ -558,20 +553,11 @@ function getRandomInt(min, max) {
 					<div class="toc">
 						<nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li>
-<ul>
 <li><a href="#google-analytics">Google Analytics</a>
-<ul>
-<li>
 <ul>
 <li><a href="#使用-ga-的好處">使用 GA 的好處</a></li>
 </ul></li>
-</ul></li>
 <li><a href="#在-hugo-上啟用-ga">在 Hugo 上啟用 GA</a></li>
-</ul></li>
-</ul></li>
 </ul>
 </nav>
 					</div>
@@ -580,11 +566,13 @@ function getRandomInt(min, max) {
 				<article class="post-content twemoji">
 					
 
-<h3 id="google-analytics">Google Analytics&nbsp;<a class="anchor" href="#google-analytics"><i class="small linkify icon"></i></a> </h3>
+<p><img src="https://coreychen71.github.io/images/2019052501/GoogleAnalytics.png" alt="TitleImage" /></p>
+
+<h1 id="google-analytics">Google Analytics&nbsp;<a class="anchor" href="#google-analytics"><i class="small linkify icon"></i></a> </h1>
 
 <p>Google Analytics，一般都會簡稱GA，是由 Google 所提供的數據分析工具，可用來分析網站或 APP 的數據使用狀況（只是目前仍使用在網站數據分析居多），由於使用 Google 搜尋引擎的人數比例將近超過80%，所以大家自然地對於 GA 的數據準確度也有比較高的信任度。GA 基本版是完全免費的，基本版的功能已經完全足夠中小型網站使用了，只有數據量較大或是有其他更多需求的企業網站才會需要使用到進階版GA 360（原名 : GA Premium）。</p>
 
-<h5 id="使用-ga-的好處">使用 GA 的好處&nbsp;<a class="anchor" href="#使用-ga-的好處"><i class="small linkify icon"></i></a> </h5>
+<h2 id="使用-ga-的好處">使用 GA 的好處&nbsp;<a class="anchor" href="#使用-ga-的好處"><i class="small linkify icon"></i></a> </h2>
 
 <ul>
 <li>了解使用者是透過怎樣的方式進入網站</li>
@@ -597,10 +585,10 @@ function getRandomInt(min, max) {
 
 <p>👉 <a href="https://shian.tw/article/55" target="_blank">GA 帳號申請、GA設定、GA驗證，3個步驟一次說明</a></p>
 
-<h3 id="在-hugo-上啟用-ga">在 Hugo 上啟用 GA&nbsp;<a class="anchor" href="#在-hugo-上啟用-ga"><i class="small linkify icon"></i></a> </h3>
+<h1 id="在-hugo-上啟用-ga">在 Hugo 上啟用 GA&nbsp;<a class="anchor" href="#在-hugo-上啟用-ga"><i class="small linkify icon"></i></a> </h1>
 
 <p>當你申請好 GA 服務並已拿到 GA 追蹤碼，接著就可以開始著手把 GA 加入到您的 Hugo 網站。<br />
-<img src="/images/Develop/2019052501/GA_TrackingID.png" alt="GA" /></p>
+<img src="https://coreychen71.github.io/images/2019052501/GA_TrackingID.png" alt="GA" /></p>
 
 <p><strong><code>Hugo</code></strong> 官方的內部模板說明文件 👉 <a href="https://gohugo.io/templates/internal/#google-analytics" target="_blank">Internal Templates</a> 有提到 Google Analytics 的使用方式。</p>
 
@@ -613,18 +601,18 @@ function getRandomInt(min, max) {
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">googleAnalytics</span> <span class="o">=</span> <span class="s2">&#34;UA-139XXXXXX-1&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="/images/Develop/2019052501/Config.png" alt="Config.toml" /></p>
+<p><img src="https://coreychen71.github.io/images/2019052501/Config.png" alt="Config.toml" /></p>
 
 <p>接著先在根目錄的 layouts 目錄下，新增二個目錄，分別為 <strong><code>partials</code></strong> 和 <strong><code>_internal</code></strong><br />
-<img src="/images/Develop/2019052501/AddFolder.png" alt="AddFolder" /></p>
+<img src="https://coreychen71.github.io/images/2019052501/AddFolder.png" alt="AddFolder" /></p>
 
 <p>再來進到您所套用的主題目錄裡，找到 partials/head.html 檔案，將它複製到剛在根目錄建立的 /layouts/partials/ 目錄下！<br />
 以我所使用的 AllinOne 主題來說，就是把 /themes/AllinOne/layouts/partials/head.html 複製到網站根目錄下的 /layouts/partials/head.html。為何要如此，那是因為 Hugo 內建模板的文件生成優先權大於主題目錄，所以把主題目錄裡的 Head.html 複製到內建模板下，這樣每次生成網站文件時，它會以內建模板為主，我選擇這樣的方式是不想去更動主題原先配置的樣板，當然您若是想要直接修改主題目錄裡的 Head.html 也是可以的，不一定要照官方的方式。
-<img src="/images/Develop/2019052501/CopyHead.png" alt="CopyHead.html" /></p>
+<img src="https://coreychen71.github.io/images/2019052501/CopyHead.png" alt="CopyHead.html" /></p>
 
 <p>然後在剛建立的 _internal 目錄下，新增 google_analytics_async.html 檔案，將 GA 的全域網站代碼（gtag.js）Copy 到 google_analytics_async.html 裡並存檔<br />
-<img src="/images/Develop/2019052501/gtagjs.png" alt="gtagjs" />
-<img src="/images/Develop/2019052501/PasteGtagjs.png" alt="PasteGtagjs" /></p>
+<img src="https://coreychen71.github.io/images/2019052501/gtagjs.png" alt="gtagjs" />
+<img src="https://coreychen71.github.io/images/2019052501/PasteGtagjs.png" alt="PasteGtagjs" /></p>
 
 <p>緊接著開啟剛剛複製的 Head.html ，貼上下方的代碼，這樣在生成文件時，它就會自動在每個頁面幫我們把 google_analytics_async.html 裡的 Script 給引用進來。</p>
 <div class="highlight"><div class="chroma">
@@ -649,12 +637,12 @@ function getRandomInt(min, max) {
 </div>
 </div>
 <p>到這邊，就已經完成了 Hugo 配置 Google Analytics，只要進行網站生成，去查看根目錄下 /public 裡的網站文件檔，可以看到在生成文件的同時，它已經幫我們把 GA 給引用進來了。<br />
-<img src="/images/Develop/2019052501/Index.png" alt="Index" /></p>
+<img src="https://coreychen71.github.io/images/2019052501/Index.png" alt="Index" /></p>
 
 <p>網站發佈後，若有人瀏覽過您的網站，您就可以在 GA 上看到分析的報表了。<br />
-<img src="/images/Develop/2019052501/GA_Report.png" alt="GA_Report" /></p>
+<img src="https://coreychen71.github.io/images/2019052501/GA_Report.png" alt="GA_Report" /></p>
 
-<p>透過 GA 的分析，可以讓我們清楚知道網站流量外，也能了解自己的部落格那篇文章點閱率最高，上述就是在 Hugo 配置 Google Analytics 的過程，若您有更好的方式或是我有筆誤的地方，歡迎透過下方的 Disqus 留言讓我知道。</p>
+<p><strong>透過 GA 的分析，可以讓我們清楚知道網站流量外，也能了解自己的部落格那篇文章點閱率最高，上述就是在 Hugo 配置 Google Analytics 的過程，若您有更好的方式或是我有筆誤的地方，歡迎透過下方的 Disqus 留言讓我知道。</strong></p>
 
 				</article>				
 			</section>
@@ -668,9 +656,9 @@ function getRandomInt(min, max) {
 
 
 	
-		<a class="ui label teal " href="/tags/hugo" title="Hugo">Hugo</a>
+		<a class="ui label blue " href="/tags/hugo" title="Hugo">Hugo</a>
 	
-		<a class="ui label violet " href="/tags/analytics" title="Analytics">Analytics</a>
+		<a class="ui label purple " href="/tags/analytics" title="Analytics">Analytics</a>
 	
 
 
@@ -826,8 +814,8 @@ function getRandomInt(min, max) {
 					<p><head>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/v4-shims.js"></script>
-</head>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"></p>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+</head></p>
 
 <h1 id="about-me">About Me</h1>
 
@@ -884,8 +872,6 @@ Please feel free to contact me if you have any comments.</p>
 
 
 
-	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
-
 
 
 
@@ -906,15 +892,6 @@ Please feel free to contact me if you have any comments.</p>
 
 
 		
-
-	<script>
-		(function () {
-		  console.log("Twemoji up and making stuff colourful!");
-		  for (var b = document.getElementsByClassName("twemoji"), a = 0; a < b.length; a++) {
-			twemoji.parse(b[a]);
-		  }
-		})();
-	</script>
 
 
 	</body>

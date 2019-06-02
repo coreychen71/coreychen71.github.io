@@ -19,7 +19,7 @@
       <description>Disqus Disqus 是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言，想要留言的訪客可以透過Disqus 會員、Facebook 帳號、Twitter 帳號等方式進行留言，同時它也可以幫您統計訪客留言排行榜，也可以透過本身的分享機制把文章分享出去，部落格肯定會希望能有一個留言板，以方便和其他人進行交流或分享，然而最常見的就是 Disqus 留言板，因此本篇就是要說明如何在將 Disqus 留言板加入 Hugo。
 Disqus 註冊帳號  官方網站 👉 Disqus 申請教學 👉 为你博客添加disqus评论系统
   如何註冊帳號一樣就不特別說明了，註冊算是還滿簡單的，若真的不清楚註冊的方式，可以參考上方的申請教學網址，23.9K 在他的部茖格裡把整個註冊流程解釋的很清楚了。
-在 Hugo 上啟用 Disqus Hugo 官方說明文件 👉 Internal Templates
+在 Hugo 上啟用 Disqus Hugo 官方說明文件 ➡️ Internal Templates
 開啟網站全域配置檔 Config.toml，加入下方參數，後面的 DisqusShortname 記得要改成您註冊時所填的 Shortname
 1  disqusShortname = &amp;#34;DisqusShortname&amp;#34;   接著在根目錄 /layouts/partials/ 裡新增 disqus.html 檔案，然後把官方提供的 Script 貼到 disqus.html 檔案裡並存檔。
 注意：若您在根目錄 /layouts 下看不到 /partials 目錄，請您自行新增此目錄。

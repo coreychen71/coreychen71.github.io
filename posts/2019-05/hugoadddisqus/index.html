@@ -21,15 +21,7 @@
 	
 	
 	<meta name="author" content="Corey Chen" />
-	<meta name="description" content="Disqus Disqus 是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言，想要留言的訪客可以透過Disqus 會員、Facebook 帳號、Twitter 帳號等方式進行留言，同時它也可以幫您統計訪客留言排行榜，也可以透過本身的分享機制把文章分享出去，部落格肯定會希望能有一個留言板，以方便和其他人進行交流或分享，然而最常見的就是 Disqus 留言板，因此本篇就是要說明如何在將 Disqus 留言板加入 Hugo。
-Disqus 註冊帳號  官方網站 👉 Disqus 申請教學 👉 为你博客添加disqus评论系统
-  如何註冊帳號一樣就不特別說明了，註冊算是還滿簡單的，若真的不清楚註冊的方式，可以參考上方的申請教學網址，23.9K 在他的部茖格裡把整個註冊流程解釋的很清楚了。
-在 Hugo 上啟用 Disqus Hugo 官方說明文件 👉 Internal Templates
-開啟網站全域配置檔 Config.toml，加入下方參數，後面的 DisqusShortname 記得要改成您註冊時所填的 Shortname
-1  disqusShortname = &amp;#34;DisqusShortname&amp;#34;   接著在根目錄 /layouts/partials/ 裡新增 disqus.html 檔案，然後把官方提供的 Script 貼到 disqus.html 檔案裡並存檔。
-注意：若您在根目錄 /layouts 下看不到 /partials 目錄，請您自行新增此目錄。
-官方提供的 Script 如下：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  &amp;lt;div id=&amp;#34;disqus_thread&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt; (function() { // Don&amp;#39;t ever inject Disqus on localhost--it creates unwanted  // discussions from &amp;#39;localhost:1313&amp;#39; on your Disqus account." />
+	<meta name="description" content="教您如何將 Disqus 留言功能加入您的 Hugo 網站" />
 
 
 
@@ -168,25 +160,25 @@ function getRandomInt(min, max) {
 	
 		
 			
-			<a class="ui label pink " href="/tags/hugo" title="hugo">hugo</a>
+			<a class="ui label purple " href="/tags/hugo" title="hugo">hugo</a>
 		
 			
-			<a class="ui label pink " href="/tags/analytics" title="analytics">analytics</a>
+			<a class="ui label red " href="/tags/analytics" title="analytics">analytics</a>
 		
 			
-			<a class="ui label olive " href="/tags/disqus" title="disqus">disqus</a>
+			<a class="ui label blue " href="/tags/disqus" title="disqus">disqus</a>
 		
 			
-			<a class="ui label brown " href="/tags/github" title="github">github</a>
+			<a class="ui label blue " href="/tags/github" title="github">github</a>
 		
 			
-			<a class="ui label violet " href="/tags/windows10" title="windows10">windows10</a>
+			<a class="ui label brown " href="/tags/windows10" title="windows10">windows10</a>
 		
 			
-			<a class="ui label olive " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
+			<a class="ui label brown " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
 		
 			
-			<a class="ui label red " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
+			<a class="ui label blue " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
 		
 	
 
@@ -408,25 +400,25 @@ function getRandomInt(min, max) {
 	
 		
 			
-			<a class="ui label pink " href="/tags/hugo" title="hugo">hugo</a>
+			<a class="ui label teal " href="/tags/hugo" title="hugo">hugo</a>
 		
 			
-			<a class="ui label green " href="/tags/analytics" title="analytics">analytics</a>
+			<a class="ui label orange " href="/tags/analytics" title="analytics">analytics</a>
 		
 			
-			<a class="ui label violet " href="/tags/disqus" title="disqus">disqus</a>
+			<a class="ui label pink " href="/tags/disqus" title="disqus">disqus</a>
 		
 			
-			<a class="ui label orange " href="/tags/github" title="github">github</a>
+			<a class="ui label pink " href="/tags/github" title="github">github</a>
 		
 			
 			<a class="ui label pink " href="/tags/windows10" title="windows10">windows10</a>
 		
 			
-			<a class="ui label pink " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
+			<a class="ui label brown " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
 		
 			
-			<a class="ui label green " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
+			<a class="ui label blue " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
 		
 	
 
@@ -561,16 +553,10 @@ function getRandomInt(min, max) {
 					<div class="toc">
 						<nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li>
-<ul>
 <li><a href="#disqus">Disqus</a></li>
 <li><a href="#disqus-註冊帳號">Disqus 註冊帳號</a></li>
 <li><a href="#在-hugo-上啟用-disqus">在 Hugo 上啟用 Disqus</a></li>
 <li><a href="#disqus-還是不出現">Disqus 還是不出現？</a></li>
-</ul></li>
-</ul></li>
 </ul>
 </nav>
 					</div>
@@ -579,11 +565,13 @@ function getRandomInt(min, max) {
 				<article class="post-content twemoji">
 					
 
-<h3 id="disqus">Disqus&nbsp;<a class="anchor" href="#disqus"><i class="small linkify icon"></i></a> </h3>
+<p><img src="https://coreychen71.github.io/images/2019052502/DisqusLogo.png" alt="TitleImage" /></p>
+
+<h1 id="disqus">Disqus&nbsp;<a class="anchor" href="#disqus"><i class="small linkify icon"></i></a> </h1>
 
 <p>Disqus 是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言，想要留言的訪客可以透過Disqus 會員、Facebook 帳號、Twitter 帳號等方式進行留言，同時它也可以幫您統計訪客留言排行榜，也可以透過本身的分享機制把文章分享出去，部落格肯定會希望能有一個留言板，以方便和其他人進行交流或分享，然而最常見的就是 Disqus 留言板，因此本篇就是要說明如何在將 Disqus 留言板加入 Hugo。</p>
 
-<h3 id="disqus-註冊帳號">Disqus 註冊帳號&nbsp;<a class="anchor" href="#disqus-註冊帳號"><i class="small linkify icon"></i></a> </h3>
+<h1 id="disqus-註冊帳號">Disqus 註冊帳號&nbsp;<a class="anchor" href="#disqus-註冊帳號"><i class="small linkify icon"></i></a> </h1>
 
 <ul>
 <li>官方網站 👉 <a href="https://disqus.com/" target="_blank">Disqus</a></li>
@@ -593,9 +581,9 @@ function getRandomInt(min, max) {
 
 <p>如何註冊帳號一樣就不特別說明了，註冊算是還滿簡單的，若真的不清楚註冊的方式，可以參考上方的申請教學網址，<a href="https://vineo.cn/" target="_blank"> <strong><code>23.9K</code></strong></a> 在他的部茖格裡把整個註冊流程解釋的很清楚了。</p>
 
-<h3 id="在-hugo-上啟用-disqus">在 Hugo 上啟用 Disqus&nbsp;<a class="anchor" href="#在-hugo-上啟用-disqus"><i class="small linkify icon"></i></a> </h3>
+<h1 id="在-hugo-上啟用-disqus">在 Hugo 上啟用 Disqus&nbsp;<a class="anchor" href="#在-hugo-上啟用-disqus"><i class="small linkify icon"></i></a> </h1>
 
-<p>Hugo 官方說明文件 👉 <a href="https://gohugo.io/templates/internal/" target="_blank">Internal Templates</a></p>
+<p>Hugo 官方說明文件 ➡️ <a href="https://gohugo.io/templates/internal/" target="_blank">Internal Templates</a></p>
 
 <p>開啟網站全域配置檔 Config.toml，加入下方參數，後面的 DisqusShortname 記得要改成您註冊時所填的 Shortname</p>
 <div class="highlight"><div class="chroma">
@@ -606,7 +594,7 @@ function getRandomInt(min, max) {
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">disqusShortname</span> <span class="o">=</span> <span class="s2">&#34;DisqusShortname&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="/images/Develop/2019052502/Config.png" alt="Config.toml" /></p>
+<p><img src="https://coreychen71.github.io/images/2019052502/Config.png" alt="Config.toml" /></p>
 
 <p>接著在根目錄 /layouts/partials/ 裡新增 disqus.html 檔案，然後把官方提供的 Script 貼到 disqus.html 檔案裡並存檔。<br />
 <font color="#DC143C">注意：若您在根目錄 /layouts 下看不到 /partials 目錄，請您自行新增此目錄。</font></p>
@@ -656,7 +644,7 @@ function getRandomInt(min, max) {
 <p>再到您 Hugo 主題的目錄下，找到 single.html 檔案，以我所使用的 AllinOne 主題來說，它的路徑如下：<br />
 /themes/AllinOne/layouts/_default/single.html，請將 single.html Copy 至根目錄 /layouts/_default/ 下。<br />
 <font color="#DC143C">一樣，若您在根目錄 /layouts 下看不到 /_default 目錄，請您自行新增此目錄。</font><br />
-<img src="/images/Develop/2019052502/CopyFile.png" alt="CopyFile" /></p>
+<img src="https://coreychen71.github.io/images/2019052502/CopyFile.png" alt="CopyFile" /></p>
 
 <p>開啟剛剛 Copy 至根目錄 /layouts/_default/single.html 檔案，找到適當的位置，貼上下方語法</p>
 <div class="highlight"><div class="chroma">
@@ -672,10 +660,10 @@ function getRandomInt(min, max) {
 </div>
 </div>
 <p><strong>何謂適當的位置，這必要需要看您所採用的主題為何，基本上就是要把上述那段語法貼在文章結束的位置，這樣 Disqus 才會出現在文章下方，以我所採用的 AllinOne 主題來說，我選擇把它貼在下圖中的位置，所以請您依您採用的主題進行微調。</strong><br />
-<img src="/images/Develop/2019052502/Single.png" alt="single.html" /></p>
+<img src="https://coreychen71.github.io/images/2019052502/Single.png" alt="single.html" /></p>
 
 <p>大致上這樣就完成了 Hugo 加上 Disqus 的配置，這時我們把本地端的 Sever 運行起來看一下文章下方是否已經出現 Disqus？這時您會發現，咦！怎麼都沒看到 Disqus！可是卻能看到一個 <a href="http://disqus.com/" target="_blank">comments powered by Disqus</a> 連結。<br />
-<img src="/images/Develop/2019052502/NoDisqus.png" alt="NoDisqus" /></p>
+<img src="https://coreychen71.github.io/images/2019052502/NoDisqus.png" alt="NoDisqus" /></p>
 
 <p>這是因為官方所提供的 Script 裡面其中一段語法的關係</p>
 <div class="highlight"><div class="chroma">
@@ -690,20 +678,20 @@ function getRandomInt(min, max) {
 </div>
 </div>
 <p>它的作用是當本地端 Server 運行時，就 return 中止，所以我們才會看不到 Disqus，這是因為當自己在編輯文章並運行 Server 進行預覽時，不需要用到留言的功能，所以才會採用這個判斷式來避免本地端的 Server 模式啟用Disqus功能。若您希望在本地端 Server 模式下，也能看到 Disqus，只要把上述那二行給註解掉並存檔就可以了。<br />
-<img src="/images/Develop/2019052502/Annotation.png" alt="Annotation" /></p>
+<img src="https://coreychen71.github.io/images/2019052502/Annotation.png" alt="Annotation" /></p>
 
 <p>這時再看一下剛剛開啟的文章最下方，就可以看到 Disqus 出現了。<br />
-<img src="/images/Develop/2019052502/ShowDisqus.png" alt="ShowDisqus" /></p>
+<img src="https://coreychen71.github.io/images/2019052502/ShowDisqus.png" alt="ShowDisqus" /></p>
 
 <hr />
 
-<h3 id="disqus-還是不出現">Disqus 還是不出現？&nbsp;<a class="anchor" href="#disqus-還是不出現"><i class="small linkify icon"></i></a> </h3>
+<h1 id="disqus-還是不出現">Disqus 還是不出現？&nbsp;<a class="anchor" href="#disqus-還是不出現"><i class="small linkify icon"></i></a> </h1>
 
 <p><strong>明明都有依照上述步驟進行了，可是就是看不到 Disqus！</strong><br />
 若您有遇到此情況，可以試試我的解法&hellip;沒錯，因為我自己就是遇到了這個情況 😫<br />
 當然這是我所遇到的情況，也許您所遇到的情況和我不同，但您可以試試朝著這個方向去解決。<br />
 首先，我開啟 Chrome 的偵錯工具，找到那段 Script 的位置，先查看問題出在那，很明顯的可以看出 disqus_shortname 這個變數是空白的！也就是這個變數並沒有取到 Config.toml 裡的 disqusShortname 參數值。<br />
-<img src="/images/Develop/2019052502/NoShortname.png" alt="NoShortName" /></p>
+<img src="https://coreychen71.github.io/images/2019052502/NoShortname.png" alt="NoShortName" /></p>
 
 <p>開啟根目錄 /layouts/partials/disqus.html 檔案，找到那個變數的位址，我想會不會是在取值的參數名稱的關係，因為大小寫的不同，所以它無法抓到正確的參數值，於是我把取值的參數名稱改成和 Config.toml 裡的名稱一樣。</p>
 <div class="highlight"><div class="chroma">
@@ -724,18 +712,18 @@ function getRandomInt(min, max) {
 </div>
 </div>
 <p>存檔後，反而連網站都不能正常運作了，終端機裡運行的 Server 也跳出了錯誤訊息。<br />
-<img src="/images/Develop/2019052502/TerminalError.png" alt="TerminalError" /><br />
-<img src="/images/Develop/2019052502/WebError.png" alt="WebError" /></p>
+<img src="https://coreychen71.github.io/images/2019052502/TerminalError.png" alt="TerminalError" /><br />
+<img src="https://coreychen71.github.io/images/2019052502/WebError.png" alt="WebError" /></p>
 
-<p>於是我再仔細查看官方文件 👉 <a href="https://gohugo.io/variables/site/" target="_blank">Site Variables</a>，也的確有這個變數值，但怎麼就是抓不到值呢？<br />
-<img src="/images/Develop/2019052502/SiteVariables.png" alt="SiteVariables" /></p>
+<p>於是我再仔細查看官方文件 ➡️ <a href="https://gohugo.io/variables/site/" target="_blank">Site Variables</a>，也的確有這個變數值，但怎麼就是抓不到值呢？<br />
+<img src="https://coreychen71.github.io/images/2019052502/SiteVariables.png" alt="SiteVariables" /></p>
 
 <p>最後在反覆仔細檢查下，才發現問題所在，就是我自己在 Config.toml 新增 disqusShortname 參數值時，貼錯了位置！<br />
 我把它貼在 params 的下方，難怪會抓不到值 😝<br />
-<img src="/images/Develop/2019052502/ErrorLocation.png" alt="ErrorLocation" /></p>
+<img src="https://coreychen71.github.io/images/2019052502/ErrorLocation.png" alt="ErrorLocation" /></p>
 
 <p>只要把它從 params 區塊移走，放在原本 site 區塊的位置，就一切正常了。<br />
-<img src="/images/Develop/2019052502/OkLocation.png" alt="OkLocation" /></p>
+<img src="https://coreychen71.github.io/images/2019052502/OkLocation.png" alt="OkLocation" /></p>
 
 <p><strong>複製、貼上的動作，做起來簡單，但要是貼錯位置，就是挖洞給自己跳。</strong></p>
 
@@ -751,9 +739,9 @@ function getRandomInt(min, max) {
 
 
 	
-		<a class="ui label brown " href="/tags/hugo" title="Hugo">Hugo</a>
+		<a class="ui label olive " href="/tags/hugo" title="Hugo">Hugo</a>
 	
-		<a class="ui label olive " href="/tags/disqus" title="Disqus">Disqus</a>
+		<a class="ui label orange " href="/tags/disqus" title="Disqus">Disqus</a>
 	
 
 
@@ -909,8 +897,8 @@ function getRandomInt(min, max) {
 					<p><head>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/v4-shims.js"></script>
-</head>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"></p>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+</head></p>
 
 <h1 id="about-me">About Me</h1>
 
@@ -967,8 +955,6 @@ Please feel free to contact me if you have any comments.</p>
 
 
 
-	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
-
 
 
 
@@ -989,15 +975,6 @@ Please feel free to contact me if you have any comments.</p>
 
 
 		
-
-	<script>
-		(function () {
-		  console.log("Twemoji up and making stuff colourful!");
-		  for (var b = document.getElementsByClassName("twemoji"), a = 0; a < b.length; a++) {
-			twemoji.parse(b[a]);
-		  }
-		})();
-	</script>
 
 
 	</body>

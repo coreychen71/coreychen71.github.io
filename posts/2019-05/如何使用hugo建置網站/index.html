@@ -21,22 +21,7 @@
 	
 	
 	<meta name="author" content="Corey Chen" />
-	<meta name="description" content="這邊我Demo的環境為macOS。
-Hugo連結  官網
- GitHub
-  準備環境 Windows系統 Windows的用戶請直接從Hugo GitHub下載安裝檔解壓後直接安裝即可。
-Release Version 0.55.5 檔案連結
-macOS系統 macOS則必需透過Homebrew這個套件管理軟體來進行安裝，所以首先要安裝Homebrew，當然若您已安裝過此套件管理工具，則可略過此步驟。
-安裝Homebrew 官網
-開啟終端機，貼上下述指令
-1  /usr/bin/ruby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34;   完成安裝後，可以透過查看版號的指令，若有秀出版號，表示已安裝完成。
-1  brew -v   接下來就可以進行Hugo的安裝了，在終端機貼上下述指令。
-1  brew install hugo   一樣待安裝完成後，透過查看版號來確認是否已安裝完成。
-1  hugo version   環境都準備好了後，就可以開始準備建置網站啦。
-開始建置網站 首先建立一個資料夾用來存放網站資料使用，這邊示範用，所以我建立了一個名稱為CoreyDemo的資料夾。
-然後在終端機裡的CoreyDemo根目錄下，輸入下述指令，生成網站。
-1  hugo new site CoreyDemo   出現下述訊息即表示已成功生成網站，根目錄下也會出現Hugo相關檔案。
-Hugo目錄結構  archetypes - 儲存." />
+	<meta name="description" content="介紹如何透過 Hugo 來建立靜態部落格" />
 
 
 
@@ -175,16 +160,16 @@ function getRandomInt(min, max) {
 	
 		
 			
-			<a class="ui label pink " href="/tags/hugo" title="hugo">hugo</a>
+			<a class="ui label teal " href="/tags/hugo" title="hugo">hugo</a>
 		
 			
-			<a class="ui label purple " href="/tags/analytics" title="analytics">analytics</a>
+			<a class="ui label green " href="/tags/analytics" title="analytics">analytics</a>
 		
 			
-			<a class="ui label orange " href="/tags/disqus" title="disqus">disqus</a>
+			<a class="ui label red " href="/tags/disqus" title="disqus">disqus</a>
 		
 			
-			<a class="ui label orange " href="/tags/github" title="github">github</a>
+			<a class="ui label purple " href="/tags/github" title="github">github</a>
 		
 			
 			<a class="ui label teal " href="/tags/windows10" title="windows10">windows10</a>
@@ -415,25 +400,25 @@ function getRandomInt(min, max) {
 	
 		
 			
-			<a class="ui label olive " href="/tags/hugo" title="hugo">hugo</a>
+			<a class="ui label orange " href="/tags/hugo" title="hugo">hugo</a>
 		
 			
-			<a class="ui label red " href="/tags/analytics" title="analytics">analytics</a>
+			<a class="ui label brown " href="/tags/analytics" title="analytics">analytics</a>
 		
 			
-			<a class="ui label violet " href="/tags/disqus" title="disqus">disqus</a>
+			<a class="ui label red " href="/tags/disqus" title="disqus">disqus</a>
 		
 			
-			<a class="ui label yellow " href="/tags/github" title="github">github</a>
+			<a class="ui label teal " href="/tags/github" title="github">github</a>
 		
 			
-			<a class="ui label violet " href="/tags/windows10" title="windows10">windows10</a>
+			<a class="ui label olive " href="/tags/windows10" title="windows10">windows10</a>
 		
 			
-			<a class="ui label teal " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
+			<a class="ui label red " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
 		
 			
-			<a class="ui label pink " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
+			<a class="ui label orange " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
 		
 	
 
@@ -568,14 +553,8 @@ function getRandomInt(min, max) {
 					<div class="toc">
 						<nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li>
-<ul>
 <li><a href="#hugo連結">Hugo連結</a></li>
 <li><a href="#準備環境">準備環境</a>
-<ul>
-<li>
 <ul>
 <li><a href="#windows系統">Windows系統</a></li>
 <li><a href="#macos系統">macOS系統</a>
@@ -583,44 +562,15 @@ function getRandomInt(min, max) {
 <li><a href="#安裝homebrew">安裝Homebrew</a></li>
 </ul></li>
 </ul></li>
-</ul></li>
 <li><a href="#開始建置網站">開始建置網站</a>
 <ul>
-<li>
-<ul>
-<li>
-<ul>
 <li><a href="#hugo目錄結構">Hugo目錄結構</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><a href="#挑選主題並套用">挑選主題並套用</a>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
+<li><a href="#挑選主題並套用">挑選主題並套用</a></li>
 <li><a href="#套用主題">套用主題</a></li>
 <li><a href="#生成網站並運行">生成網站並運行</a></li>
+<li><a href="#新增文章">新增文章</a></li>
 </ul></li>
-</ul></li>
-</ul></li>
-<li><a href="#新增文章">新增文章</a>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#進行生成">進行生成</a></li>
-<li><a href="#運行本地端服務-不包含草稿">運行本地端服務(不包含草稿)</a></li>
-<li><a href="#運行本地端服務-包含草稿-如上面說的-若您的draft是設置為true的話-請使用這個指令">運行本地端服務(包含草稿，如上面說的，若您的draft是設置為true的話，請使用這個指令)</a></li>
-<li><a href="#開啟我們剛重新生成的網站">開啟我們剛重新生成的網站</a></li>
-<li><a href="#以上就是如何透過hugo去建置屬於自己靜態網站的方式-不過主題的部份-我無法做太多說明-因為各個主題都有各個主題的使用方式-所以主題還是要參照主題的使用說明為主-至於如何將建置好的網站發佈至github上-就留到下一篇再來說明吧">以上就是如何透過Hugo去建置屬於自己靜態網站的方式，不過主題的部份，我無法做太多說明，因為各個主題都有各個主題的使用方式，所以主題還是要參照主題的使用說明為主。至於如何將建置好的網站發佈至GitHub上，就留到下一篇再來說明吧。</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
+<li><a href="#開啟本地端運行的網站">開啟本地端運行的網站</a></li>
 </ul>
 </nav>
 					</div>
@@ -629,9 +579,11 @@ function getRandomInt(min, max) {
 				<article class="post-content twemoji">
 					
 
-<p>這邊我Demo的環境為macOS。</p>
+<p><img src="/images/2019050701/HUGO.png" alt="TitleImage" /></p>
 
-<h3 id="hugo連結">Hugo連結&nbsp;<a class="anchor" href="#hugo連結"><i class="small linkify icon"></i></a> </h3>
+<p><strong>這邊我Demo的環境為macOS。</strong></p>
+
+<h1 id="hugo連結">Hugo連結&nbsp;<a class="anchor" href="#hugo連結"><i class="small linkify icon"></i></a> </h1>
 
 <ul>
 <li><a href="https://gohugo.io/" target="_blank">官網</a><br /></li>
@@ -639,23 +591,23 @@ function getRandomInt(min, max) {
 <br /></li>
 </ul>
 
-<h3 id="準備環境">準備環境&nbsp;<a class="anchor" href="#準備環境"><i class="small linkify icon"></i></a> </h3>
+<h1 id="準備環境">準備環境&nbsp;<a class="anchor" href="#準備環境"><i class="small linkify icon"></i></a> </h1>
 
-<h5 id="windows系統">Windows系統&nbsp;<a class="anchor" href="#windows系統"><i class="small linkify icon"></i></a> </h5>
+<h2 id="windows系統">Windows系統&nbsp;<a class="anchor" href="#windows系統"><i class="small linkify icon"></i></a> </h2>
 
 <p>Windows的用戶請直接從Hugo GitHub下載安裝檔解壓後直接安裝即可。<br />
 Release Version 0.55.5
 <a href="https://github.com/gohugoio/hugo/releases/tag/v0.55.5" target="_blank">檔案連結</a><br />
-<img src="/images/Develop/2019051101/Hugo_Windows.png" alt="HugoWindowsInstaller" /></p>
+<img src="https://coreychen71.github.io/images/2019051101/Hugo_Windows.png" alt="HugoWindowsInstaller" /></p>
 
-<h5 id="macos系統">macOS系統&nbsp;<a class="anchor" href="#macos系統"><i class="small linkify icon"></i></a> </h5>
+<h2 id="macos系統">macOS系統&nbsp;<a class="anchor" href="#macos系統"><i class="small linkify icon"></i></a> </h2>
 
 <p>macOS則必需透過Homebrew這個套件管理軟體來進行安裝，所以首先要安裝Homebrew，當然若您已安裝過此套件管理工具，則可略過此步驟。</p>
 
-<h6 id="安裝homebrew">安裝Homebrew&nbsp;<a class="anchor" href="#安裝homebrew"><i class="small linkify icon"></i></a> </h6>
+<h3 id="安裝homebrew">安裝Homebrew&nbsp;<a class="anchor" href="#安裝homebrew"><i class="small linkify icon"></i></a> </h3>
 
 <p><a href="https://brew.sh/index_zh-tw" target="_blank">官網</a><br />
-<img src="/images/Develop/2019051101/Homebrew.png" alt="Homebrew" /></p>
+<img src="https://coreychen71.github.io/images/2019051101/Homebrew.png" alt="Homebrew" /></p>
 
 <p>開啟終端機，貼上下述指令</p>
 <div class="highlight"><div class="chroma">
@@ -675,7 +627,7 @@ Release Version 0.55.5
 <pre class="chroma"><code class="language-shell" data-lang="shell">brew -v</code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="/images/Develop/2019051101/HomebrewInstaller.png" alt="Homebrew" title="查看Hoembrew版號" /></p>
+<p><img src="https://coreychen71.github.io/images/2019051101/HomebrewInstaller.png" alt="Homebrew" title="查看Hoembrew版號" /></p>
 
 <hr />
 
@@ -697,12 +649,12 @@ Release Version 0.55.5
 <pre class="chroma"><code class="language-shell" data-lang="shell">hugo version</code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="/images/Develop/2019051101/HugoInstaller.png" alt="Hugo" title="查看Hugo版號" /><br />
+<p><img src="https://coreychen71.github.io/images/2019051101/HugoInstaller.png" alt="Hugo" title="查看Hugo版號" /><br />
 環境都準備好了後，就可以開始準備建置網站啦。</p>
 
 <hr />
 
-<h3 id="開始建置網站">開始建置網站&nbsp;<a class="anchor" href="#開始建置網站"><i class="small linkify icon"></i></a> </h3>
+<h1 id="開始建置網站">開始建置網站&nbsp;<a class="anchor" href="#開始建置網站"><i class="small linkify icon"></i></a> </h1>
 
 <p>首先建立一個資料夾用來存放網站資料使用，這邊示範用，所以我建立了一個名稱為CoreyDemo的資料夾。<br />
 然後在終端機裡的CoreyDemo根目錄下，輸入下述指令，生成網站。</p>
@@ -715,9 +667,9 @@ Release Version 0.55.5
 </div>
 </div>
 <p>出現下述訊息即表示已成功生成網站，根目錄下也會出現Hugo相關檔案。<br />
-<img src="/images/Develop/2019051101/CreateNewWebSite.png" alt="Installer" title="生成成功訊息" /></p>
+<img src="https://coreychen71.github.io/images/2019051101/CreateNewWebSite.png" alt="Installer" title="生成成功訊息" /></p>
 
-<h6 id="hugo目錄結構">Hugo目錄結構&nbsp;<a class="anchor" href="#hugo目錄結構"><i class="small linkify icon"></i></a> </h6>
+<h2 id="hugo目錄結構">Hugo目錄結構&nbsp;<a class="anchor" href="#hugo目錄結構"><i class="small linkify icon"></i></a> </h2>
 
 <ul>
 <li>archetypes - 儲存.md的模板文件。</li>
@@ -728,13 +680,13 @@ Release Version 0.55.5
 <li>themes - 儲放主題。</li>
 <li>public - 執行hugo命令後，儲放生成靜態文件的地方。 (圖片未顯示是因為還沒執行過生成命令。)</li>
 <li>config.toml - 網站的配置文件。<br />
-<img src="/images/Develop/2019051101/HugoFiles.png" alt="installer" /><br />
+<img src="https://coreychen71.github.io/images/2019051101/HugoFiles.png" alt="installer" /><br />
 <br /></li>
 </ul>
 
 <hr />
 
-<h3 id="挑選主題並套用">挑選主題並套用&nbsp;<a class="anchor" href="#挑選主題並套用"><i class="small linkify icon"></i></a> </h3>
+<h2 id="挑選主題並套用">挑選主題並套用&nbsp;<a class="anchor" href="#挑選主題並套用"><i class="small linkify icon"></i></a> </h2>
 
 <p>建立好網站目錄後，接著就可以到官方的<a href="https://themes.gohugo.io/" target="_blank"><strong><code>主題區</code></strong></a>選一個自己喜歡的主題下來套用，這邊以<a href="https://themes.gohugo.io/hyde-hyde/" target="_blank"><strong><code>hyde-hyde</code></strong></a>主題做示範。<br />
 一樣在終端機，進到網站根目錄下的主題目錄，以示範的例子來說，就是進到 CoreyDemo/themes/下，接著輸入Git Clone的命令（若不清楚什麼是Git，請參考這個教學網站<a href="https://backlog.com/git-tutorial/tw/" target="_blank"><strong><code>連猴子都能懂的Git入門指南</code></strong></a>）。</p>
@@ -747,25 +699,25 @@ Release Version 0.55.5
 </div>
 </div>
 <p>Clone完成後，在 /themes下就會出現該主題的目錄 /hyde-hyde。<br />
-<img src="/images/Develop/2019051101/GitClone.png" alt="GitClone" title="Clone成功的訊息" /><br />
-<img src="/images/Develop/2019051101/hyde-hydeDirectory.png" alt="Directory" title="/themes/hyde-hyde/" /></p>
+<img src="https://coreychen71.github.io/images/2019051101/GitClone.png" alt="GitClone" title="Clone成功的訊息" /><br />
+<img src="https://coreychen71.github.io/images/2019051101/hyde-hydeDirectory.png" alt="Directory" title="/themes/hyde-hyde/" /></p>
 
 <hr />
 
-<h6 id="套用主題">套用主題&nbsp;<a class="anchor" href="#套用主題"><i class="small linkify icon"></i></a> </h6>
+<h2 id="套用主題">套用主題&nbsp;<a class="anchor" href="#套用主題"><i class="small linkify icon"></i></a> </h2>
 
 <p>下載好要用的主題後，接下來就可以開始著手套用主題了！<br />
 在開始之前，需要準備一個好用的編輯器，我個人是使用<a href="https://code.visualstudio.com/" target="_blank"><strong><code>VSCode</code></strong></a>，當然您可以使用如<a href="https://www.sublimetext.com/" target="_blank"><strong><code>Sublime Text</code></strong></a>或<a href="http://pad.haroopress.com/user.html" target="_blank"><strong><code>Haroopad</code></strong></a>等等的編輯器。接著就是用編輯器打開 CoreyDemo/config.toml這個配置檔。<br />
 config.toml預設值就像下圖，一開始只有3個設定值<br />
-<img src="/images/Develop/2019051101/HugoConfigDefault.png" alt="config.toml" /><br />
+<img src="https://coreychen71.github.io/images/2019051101/HugoConfigDefault.png" alt="config.toml" /><br />
 為了可以更快速的配置，我們可以到<a href="https://github.com/htr3n/hyde-hyde/blob/master/exampleSite/config.toml" target="_blank"><strong><code>hyde-hyde GitHub</code></strong></a>裡的示範目錄裡，將它Demo用的配置檔內容複製，貼到自己的配置檔裡面。<br />
-<img src="/images/Develop/2019051101/hyde-hydeConfig.png" alt="config.toml" /><br />
+<img src="https://coreychen71.github.io/images/2019051101/hyde-hydeConfig.png" alt="config.toml" /><br />
 貼上去後，可以先將網站名稱改成自己要取的名稱並存檔。<br />
-<img src="/images/Develop/2019051101/hyde-hydeDemoConfig.png" alt="config.toml" /></p>
+<img src="https://coreychen71.github.io/images/2019051101/hyde-hydeDemoConfig.png" alt="config.toml" /></p>
 
 <hr />
 
-<h6 id="生成網站並運行">生成網站並運行&nbsp;<a class="anchor" href="#生成網站並運行"><i class="small linkify icon"></i></a> </h6>
+<h2 id="生成網站並運行">生成網站並運行&nbsp;<a class="anchor" href="#生成網站並運行"><i class="small linkify icon"></i></a> </h2>
 
 <p>完成上述配置後，即可回到終端機的 /CoreyDemo目錄下，使用hugo指令來生成檔案。</p>
 <div class="highlight"><div class="chroma">
@@ -776,15 +728,15 @@ config.toml預設值就像下圖，一開始只有3個設定值<br />
 <pre class="chroma"><code class="language-shell" data-lang="shell">hugo</code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="/images/Develop/2019051101/hugoDemo.png" alt="Hugo" title="透過hugo指令生成檔案" /><br />
+<p><img src="https://coreychen71.github.io/images/2019051101/hugoDemo.png" alt="Hugo" title="透過hugo指令生成檔案" /><br />
 生成完檔後，再使用hugo server將本地端的服務運行起來，運行起來後，可以看到本地端的連線位址，請將此位址複製。<br />
-<img src="/images/Develop/2019051101/HugoServerRun.png" alt="Hugo" /><br />
+<img src="https://coreychen71.github.io/images/2019051101/HugoServerRun.png" alt="Hugo" /><br />
 開啟瀏覽器，將剛剛複製的本地端位址貼到網圵列，按下Enter，就能看到剛建置成完的網站了。<br />
-<img src="/images/Develop/2019051101/hyde-hyde-Demo.png" alt="WebSiteDemo" /></p>
+<img src="https://coreychen71.github.io/images/2019051101/hyde-hyde-Demo.png" alt="WebSiteDemo" /></p>
 
 <hr />
 
-<h3 id="新增文章">新增文章&nbsp;<a class="anchor" href="#新增文章"><i class="small linkify icon"></i></a> </h3>
+<h2 id="新增文章">新增文章&nbsp;<a class="anchor" href="#新增文章"><i class="small linkify icon"></i></a> </h2>
 
 <p>那要如何新增文章呢？<br />
 一樣在終端機裡面輸入下述指令，.md是Markdown的副檔名（記得要在 /CoreyDemo目錄下）</p>
@@ -796,13 +748,13 @@ config.toml預設值就像下圖，一開始只有3個設定值<br />
 <pre class="chroma"><code class="language-shell" data-lang="shell">hugo new posts/Demo.md</code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="/images/Develop/2019051101/HugoNewPost.png" alt="Hugo" title="建立新文章" /><br />
+<p><img src="https://coreychen71.github.io/images/2019051101/HugoNewPost.png" alt="Hugo" title="建立新文章" /><br />
 接著用編輯器將剛生成的Demo.md檔案開啟，就可以開始編輯文章內容，編輯的方式是採用Markdown輕量級標記語言，教學可以參考<a href="https://markdown.tw/" target="_blank"><strong><code>Markdown文件</code></strong></a>，這裡有個要比較注意的地方是，請將 <strong><code>draft: true</code></strong> 修改為 <strong><code>draft: false</code></strong> ，如下圖，修改 <strong><code>draft</code></strong> 的用意是要讓生成器知道這篇文章不是草稿，這樣在後續生成文件後，運行服務才可以看到我們剛剛新增的這篇文章，當然若不修改也是可以的，只是等等要運行服務時，運行的指令要多指定一個參數，才會將草稿給生成出來。<br />
 緊接著就是編輯完內容後，就可以存檔了。<br />
-<img src="/images/Develop/2019051101/HugoPostEditor.png" alt="Hugo" title="編輯Demo.md示範" /><br />
+<img src="https://coreychen71.github.io/images/2019051101/HugoPostEditor.png" alt="Hugo" title="編輯Demo.md示範" /><br />
 編輯好文章後，一樣要進行生成的動作，再將本地服務運行起來，就可以看到剛剛新新的文章了。</p>
 
-<h6 id="進行生成">進行生成&nbsp;<a class="anchor" href="#進行生成"><i class="small linkify icon"></i></a> </h6>
+<p><strong>生成文檔</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
@@ -811,7 +763,9 @@ config.toml預設值就像下圖，一開始只有3個設定值<br />
 <pre class="chroma"><code class="language-shell" data-lang="shell">hugo</code></pre></td></tr></table>
 </div>
 </div>
-<h6 id="運行本地端服務-不包含草稿">運行本地端服務(不包含草稿)&nbsp;<a class="anchor" href="#運行本地端服務-不包含草稿"><i class="small linkify icon"></i></a> </h6>
+<h1 id="開啟本地端運行的網站">開啟本地端運行的網站&nbsp;<a class="anchor" href="#開啟本地端運行的網站"><i class="small linkify icon"></i></a> </h1>
+
+<p><strong>運行本地端服務(不包含草稿)</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
@@ -820,7 +774,7 @@ config.toml預設值就像下圖，一開始只有3個設定值<br />
 <pre class="chroma"><code class="language-shell" data-lang="shell">hugo server</code></pre></td></tr></table>
 </div>
 </div>
-<h6 id="運行本地端服務-包含草稿-如上面說的-若您的draft是設置為true的話-請使用這個指令">運行本地端服務(包含草稿，如上面說的，若您的draft是設置為true的話，請使用這個指令)&nbsp;<a class="anchor" href="#運行本地端服務-包含草稿-如上面說的-若您的draft是設置為true的話-請使用這個指令"><i class="small linkify icon"></i></a> </h6>
+<p><strong>運行本地端服務(包含草稿，如上面說的，若您的draft是設置為true的話，請使用這個指令)</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
@@ -829,14 +783,12 @@ config.toml預設值就像下圖，一開始只有3個設定值<br />
 <pre class="chroma"><code class="language-shell" data-lang="shell">hugo -D server</code></pre></td></tr></table>
 </div>
 </div>
-<h6 id="開啟我們剛重新生成的網站">開啟我們剛重新生成的網站&nbsp;<a class="anchor" href="#開啟我們剛重新生成的網站"><i class="small linkify icon"></i></a> </h6>
-
 <p>剛剛我們新增的文章已經出現在網站裡了。
-<img src="/images/Develop/2019051101/HugoNewPostDemo.png" alt="WebDemo" title="NewPostDemo" /></p>
+<img src="https://coreychen71.github.io/images/2019051101/HugoNewPostDemo.png" alt="WebDemo" title="NewPostDemo" /></p>
 
 <hr />
 
-<h6 id="以上就是如何透過hugo去建置屬於自己靜態網站的方式-不過主題的部份-我無法做太多說明-因為各個主題都有各個主題的使用方式-所以主題還是要參照主題的使用說明為主-至於如何將建置好的網站發佈至github上-就留到下一篇再來說明吧">以上就是如何透過Hugo去建置屬於自己靜態網站的方式，不過主題的部份，我無法做太多說明，因為各個主題都有各個主題的使用方式，所以主題還是要參照主題的使用說明為主。至於如何將建置好的網站發佈至GitHub上，就留到下一篇再來說明吧。&nbsp;<a class="anchor" href="#以上就是如何透過hugo去建置屬於自己靜態網站的方式-不過主題的部份-我無法做太多說明-因為各個主題都有各個主題的使用方式-所以主題還是要參照主題的使用說明為主-至於如何將建置好的網站發佈至github上-就留到下一篇再來說明吧"><i class="small linkify icon"></i></a> </h6>
+<p><strong>以上就是如何透過Hugo去建置屬於自己靜態網站的方式，不過主題的部份，我無法做太多說明，因為各個主題都有各個主題的使用方式，所以主題還是要參照主題的使用說明為主。至於如何將建置好的網站發佈至GitHub上，就留到下一篇再來說明吧。</strong></p>
 
 				</article>				
 			</section>
@@ -1006,8 +958,8 @@ config.toml預設值就像下圖，一開始只有3個設定值<br />
 					<p><head>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/v4-shims.js"></script>
-</head>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"></p>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+</head></p>
 
 <h1 id="about-me">About Me</h1>
 
@@ -1064,8 +1016,6 @@ Please feel free to contact me if you have any comments.</p>
 
 
 
-	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
-
 
 
 
@@ -1086,15 +1036,6 @@ Please feel free to contact me if you have any comments.</p>
 
 
 		
-
-	<script>
-		(function () {
-		  console.log("Twemoji up and making stuff colourful!");
-		  for (var b = document.getElementsByClassName("twemoji"), a = 0; a < b.length; a++) {
-			twemoji.parse(b[a]);
-		  }
-		})();
-	</script>
 
 
 	</body>

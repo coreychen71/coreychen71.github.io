@@ -21,23 +21,7 @@
 	
 	
 	<meta name="author" content="Corey Chen" />
-	<meta name="description" content="GitHub簡介 GitHub是透過Git進行版本控制的軟體原始碼代管服務平台，它有免費和付費二種，若您希望您放在GitHub上的專案能設成Private，那就要付費，因為免費用戶的專案都只能為Public，GitHub裡面的專案均可以透過標準的Git命令進行存取和操作，所有的Git命令都可以用到GitHub專案上面。GitHub針對Windows和macOS二個平台開發了桌面用戶端，也能使用第三方外掛程式來實現Git功能。GitHub通常用於軟體開發，GitHub Pages則支援用戶透過Repository建立 靜態網站 或 靜態部落格，今天示範的就是要透過Git將建置好的部落格部署到GitHub Pages。
-申請GitHub帳號 在使用GitHub之前，當然就要是申請一個GitHub帳號，若您已經申請過了，那您就可以直接跳往後續的步驟。
- 請點選GitHub，連結至官網，點選SignUp進行註冊
- 建立帳號
- UserName：使用者名稱 EMail Address：電子郵件信箱 Password：密碼
-  若無誤，則每個欄位會出現綠色小箭頭，接者將Verify Account確認完後，就可以點下方的 Create an account進入Step2。
- 選擇訂閱
-這邊選擇Unlimited pubilc repositores for free(免費方案)，接下來的項目勾選則是給組織用戶勾選的，不管它，直接按Continue進入Step3。
- 量身訂制您的體驗
-內容就是一些基本的問卷填寫，請依自己的需求勾選後，按下Submit。
- 信箱驗證
-請至剛剛申請註冊的電子郵件信箱收取GitHub發的驗證信件，並完成帳號驗證程序，完成驗證後就直連進GitHub登入的畫面，這時可以直接點進 Your profile。
-  建立Repository 點選Repositories，再點擊右邊的 New 來建立一個新的程式庫。
-進入Create a new repository畫面後，請輸入建立GitHub Page的資料。
- Owner : 這裡已設定好是使用者名稱。 Repository name : 請輸入 [您申請的GitHub帳號] &#43; .github.io。 Description : 相關描述。
-  建立完成就會跳轉至下面畫面
-開始部署網站 首先要複製剛才建好的Repository Git網址，點選下圖箭頭所指的按鈕就可以複製了。" />
+	<meta name="description" content="介紹將建置好的 Hugo 靜態網站發佈至 GitHub" />
 
 
 
@@ -176,25 +160,25 @@ function getRandomInt(min, max) {
 	
 		
 			
-			<a class="ui label olive " href="/tags/hugo" title="hugo">hugo</a>
+			<a class="ui label green " href="/tags/hugo" title="hugo">hugo</a>
 		
 			
-			<a class="ui label olive " href="/tags/analytics" title="analytics">analytics</a>
+			<a class="ui label pink " href="/tags/analytics" title="analytics">analytics</a>
 		
 			
 			<a class="ui label orange " href="/tags/disqus" title="disqus">disqus</a>
 		
 			
-			<a class="ui label orange " href="/tags/github" title="github">github</a>
+			<a class="ui label green " href="/tags/github" title="github">github</a>
 		
 			
-			<a class="ui label teal " href="/tags/windows10" title="windows10">windows10</a>
+			<a class="ui label green " href="/tags/windows10" title="windows10">windows10</a>
 		
 			
-			<a class="ui label yellow " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
+			<a class="ui label violet " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
 		
 			
-			<a class="ui label orange " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
+			<a class="ui label violet " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
 		
 	
 
@@ -422,19 +406,19 @@ function getRandomInt(min, max) {
 			<a class="ui label orange " href="/tags/analytics" title="analytics">analytics</a>
 		
 			
-			<a class="ui label teal " href="/tags/disqus" title="disqus">disqus</a>
+			<a class="ui label brown " href="/tags/disqus" title="disqus">disqus</a>
 		
 			
-			<a class="ui label blue " href="/tags/github" title="github">github</a>
+			<a class="ui label teal " href="/tags/github" title="github">github</a>
 		
 			
-			<a class="ui label orange " href="/tags/windows10" title="windows10">windows10</a>
+			<a class="ui label red " href="/tags/windows10" title="windows10">windows10</a>
 		
 			
 			<a class="ui label brown " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
 		
 			
-			<a class="ui label orange " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
+			<a class="ui label olive " href="/tags/%E6%B2%99%E7%AE%B1" title="沙箱">沙箱</a>
 		
 	
 
@@ -569,16 +553,10 @@ function getRandomInt(min, max) {
 					<div class="toc">
 						<nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li>
-<ul>
 <li><a href="#github簡介">GitHub簡介</a></li>
 <li><a href="#申請github帳號">申請GitHub帳號</a></li>
 <li><a href="#建立repository">建立Repository</a></li>
 <li><a href="#開始部署網站">開始部署網站</a></li>
-</ul></li>
-</ul></li>
 </ul>
 </nav>
 					</div>
@@ -587,20 +565,22 @@ function getRandomInt(min, max) {
 				<article class="post-content twemoji">
 					
 
-<h3 id="github簡介">GitHub簡介&nbsp;<a class="anchor" href="#github簡介"><i class="small linkify icon"></i></a> </h3>
+<p><img src="https://coreychen71.github.io/images/2019051501/GitHub.jpg" alt="TitleImage" /></p>
+
+<h1 id="github簡介">GitHub簡介&nbsp;<a class="anchor" href="#github簡介"><i class="small linkify icon"></i></a> </h1>
 
 <p>GitHub是透過Git進行版本控制的軟體原始碼代管服務平台，它有免費和付費二種，若您希望您放在GitHub上的專案能設成Private，那就要付費，因為免費用戶的專案都只能為Public，GitHub裡面的專案均可以透過標準的Git命令進行存取和操作，所有的Git命令都可以用到GitHub專案上面。GitHub針對Windows和macOS二個平台開發了桌面用戶端，也能使用第三方外掛程式來實現Git功能。GitHub通常用於軟體開發，GitHub Pages則支援用戶透過Repository建立 <strong><code>靜態網站</code></strong> 或 <strong><code>靜態部落格</code></strong>，今天示範的就是要透過Git將建置好的部落格部署到GitHub Pages。</p>
 
-<h3 id="申請github帳號">申請GitHub帳號&nbsp;<a class="anchor" href="#申請github帳號"><i class="small linkify icon"></i></a> </h3>
+<h1 id="申請github帳號">申請GitHub帳號&nbsp;<a class="anchor" href="#申請github帳號"><i class="small linkify icon"></i></a> </h1>
 
 <p>在使用GitHub之前，當然就要是申請一個GitHub帳號，若您已經申請過了，那您就可以直接跳往後續的步驟。</p>
 
 <ol>
 <li>請點選<a href="https://github.com/" target="_blank"><strong><code>GitHub</code></strong></a>，連結至官網，點選<strong>SignUp</strong>進行註冊<br />
-<img src="/images/Develop/2019051501/SignUp.png" alt="GitHub" /><br /></li>
+<img src="https://coreychen71.github.io/images/2019051501/SignUp.png" alt="GitHub" /><br /></li>
 
 <li><p>建立帳號<br />
-<img src="/images/Develop/2019051501/SetAccount.png" alt="GitHub" /></p>
+<img src="https://coreychen71.github.io/images/2019051501/SetAccount.png" alt="GitHub" /></p>
 
 <ul>
 <li>UserName：使用者名稱</li>
@@ -610,28 +590,28 @@ function getRandomInt(min, max) {
 </ul>
 
 <p>若無誤，則每個欄位會出現綠色小箭頭，接者將Verify Account確認完後，就可以點下方的 <strong><code>Create an account</code></strong>進入Step2。<br />
-<img src="/images/Develop/2019051501/CreateAnAccount.png" alt="GitHub" /></p></li>
+<img src="https://coreychen71.github.io/images/2019051501/CreateAnAccount.png" alt="GitHub" /></p></li>
 
 <li><p>選擇訂閱<br />
-<img src="/images/Develop/2019051501/ChooseYourSubscription.png" alt="GitHub" /><br />
+<img src="https://coreychen71.github.io/images/2019051501/ChooseYourSubscription.png" alt="GitHub" /><br />
 這邊選擇Unlimited pubilc repositores for free(免費方案)，接下來的項目勾選則是給組織用戶勾選的，不管它，直接按Continue進入Step3。</p></li>
 
 <li><p>量身訂制您的體驗<br />
-<img src="/images/Develop/2019051501/TailorYourExperience.png" alt="GitHub" /><br />
+<img src="https://coreychen71.github.io/images/2019051501/TailorYourExperience.png" alt="GitHub" /><br />
 內容就是一些基本的問卷填寫，請依自己的需求勾選後，按下Submit。</p></li>
 
 <li><p>信箱驗證<br />
 請至剛剛申請註冊的電子郵件信箱收取GitHub發的驗證信件，並完成帳號驗證程序，完成驗證後就直連進GitHub登入的畫面，這時可以直接點進 <strong><code>Your profile</code></strong>。<br />
-<img src="/images/Develop/2019051501/YourProfile.png" alt="GitHub" /></p></li>
+<img src="https://coreychen71.github.io/images/2019051501/YourProfile.png" alt="GitHub" /></p></li>
 </ol>
 
-<h3 id="建立repository">建立Repository&nbsp;<a class="anchor" href="#建立repository"><i class="small linkify icon"></i></a> </h3>
+<h1 id="建立repository">建立Repository&nbsp;<a class="anchor" href="#建立repository"><i class="small linkify icon"></i></a> </h1>
 
 <p>點選Repositories，再點擊右邊的 <strong><code>New</code></strong> 來建立一個新的程式庫。<br />
-<img src="/images/Develop/2019051501/NewRepositories.png" alt="GitHub" /></p>
+<img src="https://coreychen71.github.io/images/2019051501/NewRepositories.png" alt="GitHub" /></p>
 
 <p>進入Create a new repository畫面後，請輸入建立GitHub Page的資料。<br />
-<img src="/images/Develop/2019051501/CreateNewRepository.png" alt="GitHub" /></p>
+<img src="https://coreychen71.github.io/images/2019051501/CreateNewRepository.png" alt="GitHub" /></p>
 
 <ul>
 <li>Owner : 這裡已設定好是使用者名稱。</li>
@@ -641,16 +621,16 @@ function getRandomInt(min, max) {
 </ul>
 
 <p>建立完成就會跳轉至下面畫面<br />
-<img src="/images/Develop/2019051501/CreateSuccess.png" alt="GitHub" /></p>
+<img src="https://coreychen71.github.io/images/2019051501/CreateSuccess.png" alt="GitHub" /></p>
 
-<h3 id="開始部署網站">開始部署網站&nbsp;<a class="anchor" href="#開始部署網站"><i class="small linkify icon"></i></a> </h3>
+<h1 id="開始部署網站">開始部署網站&nbsp;<a class="anchor" href="#開始部署網站"><i class="small linkify icon"></i></a> </h1>
 
 <p>首先要複製剛才建好的Repository Git網址，點選下圖箭頭所指的按鈕就可以複製了。<br />
-<img src="/images/Develop/2019051501/CopyGitAddress.png" alt="GitHub" /></p>
+<img src="https://coreychen71.github.io/images/2019051501/CopyGitAddress.png" alt="GitHub" /></p>
 
 <p>然後要使用Git的指令，把透過 <strong><code>Hugo</code></strong> 建立好的網站部署到剛剛在GitHub所建立的Repository上。<br />
-開啟終端機（若是Windows用戶，請開啟命令提示字元），進到您所建立的網站根目錄下的public資料夾，例如我這邊示範的目錄為 CoreyDemo/public，若您對上一篇<a href="https://coreychen71.github.io/post/develop/2019-05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E7%BD%AE%E7%B6%B2%E7%AB%99/" target="_blank"><strong><code>如何使用Hugo建置網站</code></strong></a>還有印象的話，應該就會記得public這個目錄就是透過hugo這個指令生成網站時，存放生成網站的資料夾。<br />
-<img src="/images/Develop/2019051501/CheckDirectory.png" alt="GitHub" /></p>
+開啟終端機（若是Windows用戶，請開啟命令提示字元），進到您所建立的網站根目錄下的public資料夾，例如我這邊示範的目錄為 CoreyDemo/public，若您對上一篇<a href="https://coreychen71.github.io/post/2019-05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E7%BD%AE%E7%B6%B2%E7%AB%99/" target="_blank"><strong><code>如何使用Hugo建置網站</code></strong></a>還有印象的話，應該就會記得public這個目錄就是透過hugo這個指令生成網站時，存放生成網站的資料夾。<br />
+<img src="https://coreychen71.github.io/images/2019051501/CheckDirectory.png" alt="GitHub" /></p>
 
 <p>建立本地Repository</p>
 <div class="highlight"><div class="chroma">
@@ -661,7 +641,7 @@ function getRandomInt(min, max) {
 <pre class="chroma"><code class="language-shell" data-lang="shell">git init</code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="/images/Develop/2019051501/GitInit.png" alt="GitHub" /></p>
+<p><img src="https://coreychen71.github.io/images/2019051501/GitInit.png" alt="GitHub" /></p>
 
 <p>將檔案加入並提交認可。<br />
 add後方的Dot是指將子目錄裡的所有檔案加入<br />
@@ -676,7 +656,7 @@ add後方的Dot是指將子目錄裡的所有檔案加入<br />
 git commit -m <span class="s2">&#34;首次提交&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="/images/Develop/2019051501/GitCommit.png" alt="GitHub" /></p>
+<p><img src="https://coreychen71.github.io/images/2019051501/GitCommit.png" alt="GitHub" /></p>
 
 <p>加入遠端Repository，記得origin後方要貼上的是您剛在GitHub複製的Git位址。</p>
 <div class="highlight"><div class="chroma">
@@ -687,7 +667,7 @@ git commit -m <span class="s2">&#34;首次提交&#34;</span></code></pre></td></
 <pre class="chroma"><code class="language-shell" data-lang="shell">git remote add origin https://github.com/coreydemo/coreydemo.github.io.git</code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="/images/Develop/2019051501/GitAddRemote.png" alt="GitHub" /></p>
+<p><img src="https://coreychen71.github.io/images/2019051501/GitAddRemote.png" alt="GitHub" /></p>
 
 <p>發佈到遠端Repository</p>
 <div class="highlight"><div class="chroma">
@@ -698,10 +678,10 @@ git commit -m <span class="s2">&#34;首次提交&#34;</span></code></pre></td></
 <pre class="chroma"><code class="language-shell" data-lang="shell">git push -u origin master</code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="/images/Develop/2019051501/GitPushSuccess.png" alt="GitHub" /></p>
+<p><img src="https://coreychen71.github.io/images/2019051501/GitPushSuccess.png" alt="GitHub" /></p>
 
 <p>推送完成後，就可以開啟瀏覽器輸入剛創建Repository的名稱：coreydemo.github.io，就能看到部署上去的網站了。<br />
-<img src="/images/Develop/2019051501/CoreyDemoSite.png" alt="CoreyDemoSite" /></p>
+<img src="https://coreychen71.github.io/images/2019051501/CoreyDemoSite.png" alt="CoreyDemoSite" /></p>
 
 				</article>				
 			</section>
@@ -715,9 +695,9 @@ git commit -m <span class="s2">&#34;首次提交&#34;</span></code></pre></td></
 
 
 	
-		<a class="ui label brown " href="/tags/hugo" title="Hugo">Hugo</a>
+		<a class="ui label violet " href="/tags/hugo" title="Hugo">Hugo</a>
 	
-		<a class="ui label pink " href="/tags/github" title="GitHub">GitHub</a>
+		<a class="ui label brown " href="/tags/github" title="GitHub">GitHub</a>
 	
 
 
@@ -873,8 +853,8 @@ git commit -m <span class="s2">&#34;首次提交&#34;</span></code></pre></td></
 					<p><head>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/v4-shims.js"></script>
-</head>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"></p>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+</head></p>
 
 <h1 id="about-me">About Me</h1>
 
@@ -931,8 +911,6 @@ Please feel free to contact me if you have any comments.</p>
 
 
 
-	<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
-
 
 
 
@@ -953,15 +931,6 @@ Please feel free to contact me if you have any comments.</p>
 
 
 		
-
-	<script>
-		(function () {
-		  console.log("Twemoji up and making stuff colourful!");
-		  for (var b = document.getElementsByClassName("twemoji"), a = 0; a < b.length; a++) {
-			twemoji.parse(b[a]);
-		  }
-		})();
-	</script>
 
 
 	</body>

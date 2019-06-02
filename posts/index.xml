@@ -15,15 +15,7 @@
       <pubDate>Sat, 25 May 2019 19:45:13 +0800</pubDate>
       
       <guid>https://coreychen71.github.io/posts/2019-05/hugoadddisqus/</guid>
-      <description>Disqus Disqus 是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言，想要留言的訪客可以透過Disqus 會員、Facebook 帳號、Twitter 帳號等方式進行留言，同時它也可以幫您統計訪客留言排行榜，也可以透過本身的分享機制把文章分享出去，部落格肯定會希望能有一個留言板，以方便和其他人進行交流或分享，然而最常見的就是 Disqus 留言板，因此本篇就是要說明如何在將 Disqus 留言板加入 Hugo。
-Disqus 註冊帳號  官方網站 👉 Disqus 申請教學 👉 为你博客添加disqus评论系统
-  如何註冊帳號一樣就不特別說明了，註冊算是還滿簡單的，若真的不清楚註冊的方式，可以參考上方的申請教學網址，23.9K 在他的部茖格裡把整個註冊流程解釋的很清楚了。
-在 Hugo 上啟用 Disqus Hugo 官方說明文件 👉 Internal Templates
-開啟網站全域配置檔 Config.toml，加入下方參數，後面的 DisqusShortname 記得要改成您註冊時所填的 Shortname
-1  disqusShortname = &amp;#34;DisqusShortname&amp;#34;   接著在根目錄 /layouts/partials/ 裡新增 disqus.html 檔案，然後把官方提供的 Script 貼到 disqus.html 檔案裡並存檔。
-注意：若您在根目錄 /layouts 下看不到 /partials 目錄，請您自行新增此目錄。
-官方提供的 Script 如下：
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  &amp;lt;div id=&amp;#34;disqus_thread&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt; (function() { // Don&amp;#39;t ever inject Disqus on localhost--it creates unwanted  // discussions from &amp;#39;localhost:1313&amp;#39; on your Disqus account.</description>
+      <description>教您如何將 Disqus 留言功能加入您的 Hugo 網站</description>
     </item>
     
     <item>
@@ -32,12 +24,7 @@ Disqus 註冊帳號  官方網站 👉 Disqus 申請教學 👉 为你博客添�
       <pubDate>Sat, 25 May 2019 10:04:19 +0800</pubDate>
       
       <guid>https://coreychen71.github.io/posts/2019-05/hugoaddgoogleanalytics/</guid>
-      <description>Google Analytics Google Analytics，一般都會簡稱GA，是由 Google 所提供的數據分析工具，可用來分析網站或 APP 的數據使用狀況（只是目前仍使用在網站數據分析居多），由於使用 Google 搜尋引擎的人數比例將近超過80%，所以大家自然地對於 GA 的數據準確度也有比較高的信任度。GA 基本版是完全免費的，基本版的功能已經完全足夠中小型網站使用了，只有數據量較大或是有其他更多需求的企業網站才會需要使用到進階版GA 360（原名 : GA Premium）。
-使用 GA 的好處  了解使用者是透過怎樣的方式進入網站 了解進入網站的目標對象 觀察使用者進入網站後的行為流程   所以若是您也希望您的 Hugo 網站能夠透過 GA 來分析使用上的數據，享受 GA 所帶來的上述好處，可以去申請 GA ，再將 GA 加到自己的 Blog 裡，至於要如何申請 GA 功能，這邊就不再特地撰述了，想了解如何申請的人，可以參考 翔說什麼 的教學文章。
-👉 GA 帳號申請、GA設定、GA驗證，3個步驟一次說明
-在 Hugo 上啟用 GA 當你申請好 GA 服務並已拿到 GA 追蹤碼，接著就可以開始著手把 GA 加入到您的 Hugo 網站。
-Hugo 官方的內部模板說明文件 👉 Internal Templates 有提到 Google Analytics 的使用方式。
-首先必需在網站的全域配置檔，設置剛剛申請的 GA 追蹤碼，開啟 Hugo 網站根目錄的 Config.</description>
+      <description>教您如何將 Google Analytics 加入您的 Hugo 網站</description>
     </item>
     
     <item>
@@ -46,15 +33,7 @@ Hugo 官方的內部模板說明文件 👉 Internal Templates 有提到 Google 
       <pubDate>Thu, 23 May 2019 21:27:00 +0800</pubDate>
       
       <guid>https://coreychen71.github.io/posts/2019-05/windows10_upgrade_1903_and_sandbox/</guid>
-      <description>Windows 10 May 2019 Update Windows 10 1903 在 2019/05/22 正式上線了！
-Windows 10 使用者，可以透過「設定」-&amp;gt;「更新和安全性」-&amp;gt;「Windows Update」，選擇「檢查更新」後，看是否有 Windows 10 1903 的更新訊息。因為並不是每位 Windows 10 使用者，都可以選擇立即下載並安裝Windows10 1903。因為上一次 Windows 10 1809 更新後，許多電腦出現各式各樣的 Bug，導致大規模系統當機的問題，這次微軟採用一邊釋出更新，一邊蒐集資訊和使用者意見的方式，逐步推出 Windwos 10 1903。
-手動升級方式 當然若是等不及，想要先行升級至1903的話，也是可以透過其它方式來進行升級&amp;hellip;
- 下載 Windows 10 1903 ISO 檔 透過 Windows 更新小幫手   這邊會介紹如何透過 Windows 更新小幫手來進行升級，若您之前已經有裝過 Windows 更新小幫手，也請您再從新下載一次再進行升級，不然若是使用舊的 Windows 更新小幫手，一樣也是看不到 1903 更新的。
-Windows 10 更新小幫手的下載位址請參照右側連結 Windows 10 更新小幫手，點選「立即更新」即可下載。
-下載完，請執行 Windows 更新小幫手，就可以看到1903的更新，按下立即更新
-等它檢查完相容性，按下一步，接著就等它進行下載和升級
-升級完成並重開機進到系統後，請在左下方的搜尋列輸入下述指令，即可看到 Windwos 現行的版本，這樣就完成1903的升級了。
-1  winver   開啟 Windows 沙箱功能 什麼是 Windows 沙箱？ 沙箱(Windows Sandbox)模式，是一種將程式執行環境限制在一個獨立的執行區域，當該執行環境整個弄垮，也不會影響到其它程式或整個系統。微軟表示「這個輕量化桌面環境，能在隔離環境下，讓使用者安全執行應用程式」。</description>
+      <description>將 Win10 升級至 1903 版 &amp; 開啟沙箱的方式</description>
     </item>
     
     <item>
@@ -63,23 +42,7 @@ Windows 10 更新小幫手的下載位址請參照右側連結 Windows 10 更新
       <pubDate>Wed, 15 May 2019 20:56:40 +0800</pubDate>
       
       <guid>https://coreychen71.github.io/posts/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/</guid>
-      <description>GitHub簡介 GitHub是透過Git進行版本控制的軟體原始碼代管服務平台，它有免費和付費二種，若您希望您放在GitHub上的專案能設成Private，那就要付費，因為免費用戶的專案都只能為Public，GitHub裡面的專案均可以透過標準的Git命令進行存取和操作，所有的Git命令都可以用到GitHub專案上面。GitHub針對Windows和macOS二個平台開發了桌面用戶端，也能使用第三方外掛程式來實現Git功能。GitHub通常用於軟體開發，GitHub Pages則支援用戶透過Repository建立 靜態網站 或 靜態部落格，今天示範的就是要透過Git將建置好的部落格部署到GitHub Pages。
-申請GitHub帳號 在使用GitHub之前，當然就要是申請一個GitHub帳號，若您已經申請過了，那您就可以直接跳往後續的步驟。
- 請點選GitHub，連結至官網，點選SignUp進行註冊
- 建立帳號
- UserName：使用者名稱 EMail Address：電子郵件信箱 Password：密碼
-  若無誤，則每個欄位會出現綠色小箭頭，接者將Verify Account確認完後，就可以點下方的 Create an account進入Step2。
- 選擇訂閱
-這邊選擇Unlimited pubilc repositores for free(免費方案)，接下來的項目勾選則是給組織用戶勾選的，不管它，直接按Continue進入Step3。
- 量身訂制您的體驗
-內容就是一些基本的問卷填寫，請依自己的需求勾選後，按下Submit。
- 信箱驗證
-請至剛剛申請註冊的電子郵件信箱收取GitHub發的驗證信件，並完成帳號驗證程序，完成驗證後就直連進GitHub登入的畫面，這時可以直接點進 Your profile。
-  建立Repository 點選Repositories，再點擊右邊的 New 來建立一個新的程式庫。
-進入Create a new repository畫面後，請輸入建立GitHub Page的資料。
- Owner : 這裡已設定好是使用者名稱。 Repository name : 請輸入 [您申請的GitHub帳號] + .github.io。 Description : 相關描述。
-  建立完成就會跳轉至下面畫面
-開始部署網站 首先要複製剛才建好的Repository Git網址，點選下圖箭頭所指的按鈕就可以複製了。</description>
+      <description>介紹將建置好的 Hugo 靜態網站發佈至 GitHub</description>
     </item>
     
     <item>
@@ -88,22 +51,7 @@ Windows 10 更新小幫手的下載位址請參照右側連結 Windows 10 更新
       <pubDate>Sat, 11 May 2019 13:52:51 +0800</pubDate>
       
       <guid>https://coreychen71.github.io/posts/2019-05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E7%BD%AE%E7%B6%B2%E7%AB%99/</guid>
-      <description>這邊我Demo的環境為macOS。
-Hugo連結  官網
- GitHub
-  準備環境 Windows系統 Windows的用戶請直接從Hugo GitHub下載安裝檔解壓後直接安裝即可。
-Release Version 0.55.5 檔案連結
-macOS系統 macOS則必需透過Homebrew這個套件管理軟體來進行安裝，所以首先要安裝Homebrew，當然若您已安裝過此套件管理工具，則可略過此步驟。
-安裝Homebrew 官網
-開啟終端機，貼上下述指令
-1  /usr/bin/ruby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34;   完成安裝後，可以透過查看版號的指令，若有秀出版號，表示已安裝完成。
-1  brew -v   接下來就可以進行Hugo的安裝了，在終端機貼上下述指令。
-1  brew install hugo   一樣待安裝完成後，透過查看版號來確認是否已安裝完成。
-1  hugo version   環境都準備好了後，就可以開始準備建置網站啦。
-開始建置網站 首先建立一個資料夾用來存放網站資料使用，這邊示範用，所以我建立了一個名稱為CoreyDemo的資料夾。
-然後在終端機裡的CoreyDemo根目錄下，輸入下述指令，生成網站。
-1  hugo new site CoreyDemo   出現下述訊息即表示已成功生成網站，根目錄下也會出現Hugo相關檔案。
-Hugo目錄結構  archetypes - 儲存.</description>
+      <description>介紹如何透過 Hugo 來建立靜態部落格</description>
     </item>
     
     <item>
@@ -112,26 +60,7 @@ Hugo目錄結構  archetypes - 儲存.</description>
       <pubDate>Tue, 07 May 2019 22:40:22 +0800</pubDate>
       
       <guid>https://coreychen71.github.io/posts/2019-05/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9/</guid>
-      <description>靜態？動態？ 在介紹靜態網頁框架之前，先稍微了解網頁主要有二種型態，就是分為靜態和動態。
-靜態網頁 靜態網頁指的是沒有包含動畫(Flash動畫或Gif動畫)的純文字及圖片網頁，當然也不包含網頁程式(如ASP、PHP、ASP.Net…等)與資料庫的純文字及圖片網頁。
-動態網頁 動態網頁則指包含Flash動畫或Gif動畫的網頁，或是包含網頁程式及資料庫的網頁，透過程式語言結合資料庫的方式，進而設計出可與網友進行互動的功能。 例如：購物車、會員機制、留言板、討論區、投票區、訊息發佈、商品發佈…等等。
-為何選靜態的方式來建置Blog？ 當然就是因為它不需要後端程式與資料庫，速度又快，版面設計不受限，又能把部落格放在GitHub Page，而且能直接使用Markdown輕量級標記式語言來進行撰寫，撰寫的文章也能納入版控，所以自然成為我的首選！
-現在就有許多人都開始採用這樣的方式來建置自己的部落格，當然您也可以採用另一種方式，就是透過免費平台來進行，例如WordPress、痞客邦、點部落等等&amp;hellip;
-至於到底該採用那種方式，沒有標準答案，只要適合自己，符合切身的需求，都是一個好選擇！
-目前主流的靜態產生器有那些？ 目前較主流的產生器有下面四種，不過基本上，前三種比較多人在使用，所以後面的介紹，我只會以前三種來做介紹。
- Jekyll
- Hexo
- Hugo
- Middleman
-  Jekyll Jekyll是基於RubyGem的解析引擎，能夠將樣板、liquid 語言、markdown 轉換為靜態網頁的產生器。
-Jekyll 優點  免費和開源。
- 簡單易用。
- 自帶默認主題，安裝後即可使用。 豐富的插件。   Jekyll 缺點  隨著網站內容的增長，構建過程變得非常慢。 較多插件都已過時。
-  Hugo Hugo是用Go語言構建的靜態網站生成器，它宣稱為世界上最快的網站構建框架。
-它可以在不到幾秒鐘的時間內安裝好Hugo，並在很短的時間內構建好一個靜態網站。
-Hugo 優點  安裝簡易。 超快的速度，引擎和速度優化。
- 頁面生成效率高，幾乎是瞬間完成。
-  Hugo 缺點  主題使用Go模板，需要熟悉Go語言才能創建主題。 未附帶默認主題，主題選擇性較少。 插件資源較不足。   Hexo Hexo是基於Node.js的靜態網站生成器，Hexo是一個快速、簡單且強大的網誌框架。 Hexo使用Markdown（或其他渲染引擎）解析您的文章，並在幾秒鐘內，生成數百個靜態文件並透過漂亮的主題產生靜態檔案。</description>
+      <description>靜態網站產生器的介紹與目前主流的產生器有那些</description>
     </item>
     
     <item>

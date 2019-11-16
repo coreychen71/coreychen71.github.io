@@ -5,7 +5,7 @@
     <link>https://coreychen71.github.io/tags/</link>
     <description>Recent content in Tags on Corey Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 10 Jun 2019 22:28:40 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 22:09:03 +0800</lastBuildDate>
     
 	<atom:link href="https://coreychen71.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,9 +13,27 @@
     <item>
       <title>C#</title>
       <link>https://coreychen71.github.io/tags/c#/</link>
-      <pubDate>Mon, 10 Jun 2019 22:28:40 +0800</pubDate>
+      <pubDate>Tue, 29 Oct 2019 22:09:03 +0800</pubDate>
       
       <guid>https://coreychen71.github.io/tags/c#/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OOP</title>
+      <link>https://coreychen71.github.io/tags/oop/</link>
+      <pubDate>Tue, 29 Oct 2019 22:09:03 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/tags/oop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>物件導向</title>
+      <link>https://coreychen71.github.io/tags/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91/</link>
+      <pubDate>Tue, 29 Oct 2019 22:09:03 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/tags/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91/</guid>
       <description></description>
     </item>
     

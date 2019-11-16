@@ -4,10 +4,19 @@
     <link>https://coreychen71.github.io/posts/</link>
     <description>Recent content in Posts on Corey Chen&#39;s Blog</description>
     <meta name="generator" content="Hugo 0.55.5" />
-    <lastBuildDate>Mon, 10 Jun 2019 22:28:40 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 22:09:03 +0800</lastBuildDate>
     
         <atom:link href="https://coreychen71.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OOP 物件導向的四個特性</title>
+      <link>https://coreychen71.github.io/posts/2019-10/oop/</link>
+      <pubDate>Tue, 29 Oct 2019 22:09:03 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/posts/2019-10/oop/</guid>
+      <description>物件導向程式設計的四個重要特性</description>
+    </item>
     
     <item>
       <title>強型別與弱型別</title>

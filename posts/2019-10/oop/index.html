@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<title>
+	OOP 物件導向的四個特性
+</title>
+		<style>
+	body, body.pushable {
+		background-repeat: no-repeat;
+	  	background-attachment: fixed;
+	  	background-size: cover !important;
+	}
+</style>
+
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+	
+	
+	
+	<meta name="author" content="Corey Chen" />
+	<meta name="description" content="物件導向程式設計的四個重要特性" />
+
+
+
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+
+
+
+		
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+
+ <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Inconsolata" rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/site.css">
+
+
+
+	<link rel="stylesheet" type="text/css" href="/css/highlight.css">
+
+
+
+
+	
+		<link rel="stylesheet" type="text/css" href="/css/highlight.css">
+	
+
+
+
+<style>
+	body.pushable {
+		display: block;
+		
+			background-image: var(--bgImage) !important;
+		 ;
+	}
+</style>
+
+
+
+<script>
+	
+	var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+	console.log("The client device is a "+(isMobile?"mobile":"PC")+".")
+</script>
+
+	</head>
+
+	<body>
+		<script>
+var prevBgIndex = 0;
+var bodyBgSwitchIndex = 0;
+
+
+
+
+
+
+	
+		var gradients = [
+		  [],
+		  ['#40e0d0', '#ff8c00', '#ff0080'], 
+		  ['#3e5151', '#decba4'], 
+		  ['#11998e', '#38ef7d'], 
+		  ['#108dc7', '#ef8e38'], 
+		  ['#fc5c7d', '#6a82fb'], 
+		  ['#fc466b', '#3f5efb'], 
+		  ['#c94b4b', '#4b134f'], 
+		  ['#23074d', '#cc5333'] 
+		];
+		var randomBgColor = gradients[getRandomInt(0, gradients.length)].join(", ");
+		var backgroundProperty = 'linear-gradient(to right, ' + randomBgColor + ')';
+		document.body.style.background = backgroundProperty;
+	
+
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  var random;
+  while (1) {
+    random = Math.floor(Math.random() * (max - min)) + min;
+    if (random !== prevBgIndex) {
+      prevBgIndex = random;
+      break;
+    }
+  }
+  return random;
+}
+</script>
+
+
+
+
+		<div id="sidebar" class="ui sidebar inverted vertical menu">
+	
+	<section id="author" class="ui top attached center aligned inverted segment">
+		
+<div class="ui small circular image">
+	
+		<img src="/images/coreychen.png">
+	
+</div>
+
+
+<h3 class="ui header">
+	Corey Chen
+	<div class="sub header">I&#39;m not best, but I&#39;m trying my best.</div>
+</h3>
+
+	</section>
+
+	
+	
+		<section class="ui attached center aligned inverted segment sidebar-dream-tags">
+			
+			
+			
+			
+
+
+
+
+	
+	
+		
+			
+			<a class="ui label red " href="/tags/hugo" title="hugo">hugo</a>
+		
+			
+			<a class="ui label blue " href="/tags/c" title="c#">c#</a>
+		
+			
+			<a class="ui label teal " href="/tags/analytics" title="analytics">analytics</a>
+		
+			
+			<a class="ui label olive " href="/tags/disqus" title="disqus">disqus</a>
+		
+			
+			<a class="ui label purple " href="/tags/github" title="github">github</a>
+		
+			
+			<a class="ui label green " href="/tags/oop" title="oop">oop</a>
+		
+			
+			<a class="ui label brown " href="/tags/windows10" title="windows10">windows10</a>
+		
+			
+			<a class="ui label teal " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
+		
+	
+
+
+		</section>
+	
+
+	
+	
+		<section class="ui attached inverted segment sidebar-dream-categories both flexbox">
+			<div class="ui inverted accordion">
+				
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/blog">blog</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/hugoadddisqus/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Hugo 加入 Disqus 整合性留言管理系統</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/hugoaddgoogleanalytics/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Hugo 加入 Google Analytics</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>將網站部署至GitHub Page</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E7%BD%AE%E7%B6%B2%E7%AB%99/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>如何使用Hugo建置網站</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>靜態網站產生器介紹</p>
+				</div>
+			</a>
+		
+	</div>
+
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/c#%E5%AD%B8%E7%BF%92">c#學習</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-10/oop/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>OOP 物件導向的四個特性</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-06/strongtypeweaktype/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>強型別與弱型別</p>
+				</div>
+			</a>
+		
+	</div>
+
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/windows">windows</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/windows10_upgrade_1903_and_sandbox/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Windows 10 升級 1903 與開啟沙箱功能</p>
+				</div>
+			</a>
+		
+	</div>
+
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B">心情記事</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%BA%8F%E7%AB%A0/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>序章</p>
+				</div>
+			</a>
+		
+	</div>
+
+
+			</div>
+		</section>
+	
+
+	
+	<section id="footer" class="ui bottom attached center aligned inverted segment">
+		
+
+	<p>© 2019 Corey Chen&#39;s Blog</p>
+
+
+<p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p>
+
+	</section>
+</div>
+
+
+		<div class="pusher">
+			<div class="flipper">
+				<div class="front">
+					
+	<nav class="ui top secondary menu bar">
+	
+	<div class="item">
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
+	</div>
+
+	
+	
+		<div class="item">
+			<a href="/">
+				<i class="inverted big link home icon" title="Home"></i>
+			</a>
+		</div>
+	
+
+	
+	
+
+	
+	
+		<div class="item">
+			<a href="/tags">
+				<i class="inverted big link tags icon" title="All Tags"></i>
+			</a>
+		</div>
+	
+
+	
+	
+		<div class="item">
+			<a href="/categories">
+				<i class="inverted big link cubes icon" title="All Categories"></i>
+			</a>
+    	</div>
+	
+
+	
+	
+
+	
+	
+		<div class="ui container tablet computer only grid">
+			<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
+				<i class="inverted big link sidebar icon" title="Show Sidebar"></i>
+			</div>
+		</div>
+	
+
+	
+	
+		<div class="item right">
+			<a href="/posts/index.xml">
+				<i class="inverted big link rss icon" title="RSS Feed"></i>
+			</a>
+		</div>
+	
+</nav>
+
+
+	<div class="ui centered grid">
+		
+		<div class="sixteen wide mobile only column">
+				<div class="ui inverted accordion">
+	<div id="header" class="ui inverted segment column box">		
+		
+		<header id="author" class="ui top attached center aligned inverted segment">
+			
+<div class="ui small circular image">
+	
+		<img src="/images/coreychen.png">
+	
+</div>
+
+
+<h3 class="ui header">
+	Corey Chen
+	<div class="sub header">I&#39;m not best, but I&#39;m trying my best.</div>
+</h3>
+
+		</header>
+
+		
+		<div class=" title header-title">
+			
+				<div id="tag-category-pop" class="ui red right corner label">
+					<i class="hand point icon down" title="Show/hide tags and categories"></i>
+				</div>
+			
+		</div>
+		
+		
+		<div id="tag-category" class=" content">
+			
+				<section class="ui attached center aligned inverted segment dream-tags none flexbox">
+					
+					
+					
+
+
+
+
+	
+	
+		
+			
+			<a class="ui label yellow " href="/tags/hugo" title="hugo">hugo</a>
+		
+			
+			<a class="ui label olive " href="/tags/c" title="c#">c#</a>
+		
+			
+			<a class="ui label violet " href="/tags/analytics" title="analytics">analytics</a>
+		
+			
+			<a class="ui label purple " href="/tags/disqus" title="disqus">disqus</a>
+		
+			
+			<a class="ui label teal " href="/tags/github" title="github">github</a>
+		
+			
+			<a class="ui label violet " href="/tags/oop" title="oop">oop</a>
+		
+			
+			<a class="ui label orange " href="/tags/windows10" title="windows10">windows10</a>
+		
+			
+			<a class="ui label pink " href="/tags/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B" title="心情記事">心情記事</a>
+		
+	
+
+
+				</section>
+			
+
+			
+				<section class="ui attached inverted segment dream-categories both flexbox">
+					<div class="inverted accordion">
+						
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/blog">blog</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/hugoadddisqus/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Hugo 加入 Disqus 整合性留言管理系統</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/hugoaddgoogleanalytics/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Hugo 加入 Google Analytics</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%B0%87%E7%B6%B2%E7%AB%99%E9%83%A8%E7%BD%B2%E8%87%B3githubpage/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>將網站部署至GitHub Page</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E5%BB%BA%E7%BD%AE%E7%B6%B2%E7%AB%99/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>如何使用Hugo建置網站</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99%E7%94%A2%E7%94%9F%E5%99%A8%E4%BB%8B%E7%B4%B9/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>靜態網站產生器介紹</p>
+				</div>
+			</a>
+		
+	</div>
+
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/c#%E5%AD%B8%E7%BF%92">c#學習</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-10/oop/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>OOP 物件導向的四個特性</p>
+				</div>
+			</a>
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-06/strongtypeweaktype/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>強型別與弱型別</p>
+				</div>
+			</a>
+		
+	</div>
+
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/windows">windows</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/windows10_upgrade_1903_and_sandbox/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>Windows 10 升級 1903 與開啟沙箱功能</p>
+				</div>
+			</a>
+		
+	</div>
+
+	
+	<div class="title">
+		<i class="dropdown icon"></i>
+		<a class="link" href="/categories/%E5%BF%83%E6%83%85%E8%A8%98%E4%BA%8B">心情記事</a>
+	</div>
+
+	
+	<div class="content">
+		
+			<a class="item" href="https://coreychen71.github.io/posts/2019-05/%E5%BA%8F%E7%AB%A0/">
+				<div>
+					<i class="cocktail icon"></i>
+					<p>序章</p>
+				</div>
+			</a>
+		
+	</div>
+
+
+					</div>
+				</section>
+			
+		</div>
+
+		
+		<footer class="ui bottom attached center aligned inverted segment">
+			
+
+	<p>© 2019 Corey Chen&#39;s Blog</p>
+
+
+<p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p>
+
+		</footer>
+	</div>
+</div>
+
+		</div>
+
+		<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
+			
+			<section class="ui secondary top attached black segment post-head">
+				<h1 class="post-title">
+					OOP 物件導向的四個特性
+				</h1>
+
+				<div class="sub header">
+					<div><span><i class="calendar outline icon"></i>Oct 29, 2019</span></div>
+					
+					<div><span class="disqusComment"><i class="comment outline icon"></i><a href="https://coreychen71.github.io/posts/2019-10/oop/#disqus_thread" class="disqus-comment-count" data-disqus-identifier="27dd94d66f821bef7f65caa85f5c838f"></a></span></div>
+					<div><span><i class="clock outline icon"></i>5 min read</span></div>
+					<div><span><i class="angle double up icon"></i>Last updated on Oct 29, 2019</span></div>
+				</div>
+				<hr>
+
+				
+					<div class="toc">
+						<nav id="TableOfContents">
+<ul>
+<li><a href="#物件導向四個特性">物件導向四個特性：</a>
+<ul>
+<li><a href="#1-抽象-abstraction">1. 抽象（Abstraction）</a></li>
+<li><a href="#2-封裝-encapsulation">2. 封裝（Encapsulation）</a></li>
+<li><a href="#3-繼承-inheritance">3. 繼承（Inheritance）</a></li>
+<li><a href="#4-多型-polymorphism">4. 多型（Polymorphism）</a></li>
+</ul></li>
+</ul>
+</nav>
+					</div>
+				
+
+				<article class="post-content twemoji">
+					
+
+<p>相信只要有在寫程式的人，一定都有聽過物件導向這四個字，尤其是寫 C# 的人一定也曉得 C# 本身就是物件導向程式語言。但聽過歸聽過，還是有許多人仍不曉得物件導向的四大特性，尤其是初學者，所以今天就來說說這四大特性，因為這是很重要的觀念，只要您今天是寫 C#，甚至希望您日後的程式碼能夠好維護的話，更是不能不知道。至於物件導向的由來或是介紹之類的，在這篇文章中不會有任何的介紹，有興趣的人請直接Google，因為在這篇文章主要是直接帶您認識這四大特性！</p>
+
+<h1 id="物件導向四個特性">物件導向四個特性：&nbsp;<a class="anchor" href="#物件導向四個特性"><i class="small linkify icon"></i></a> </h1>
+
+<h2 id="1-抽象-abstraction">1. 抽象（Abstraction）&nbsp;<a class="anchor" href="#1-抽象-abstraction"><i class="small linkify icon"></i></a> </h2>
+
+<p>抽象其實不要把它想的太複雜，簡單地說就是把真實世界的需求轉換成類別，而這個類別可以包含狀態（屬性）或是行為（方法）。<br />
+例如真實世界中的汽車，汽車的屬性會有廠牌、顏色、速度等等，那汽車的行為不外乎就是加速、剎車，所以在大致分出汽車的屬性與行為後，就可以依照屬性與行為來設計一個汽車的類別。設計好汽車類別後，這個汽車類別就是一個藍圖，需要使用它的時，只要將它 new 出來，就可以針對 new 出來的汽車物件屬性或方法來進行存取。</p>
+
+<p><strong>程式範例</strong><br />
+依照汽車的屬性與行為，設計一個 Car 類別並使用 Car 類別生成一個汽車物件後，使用它的屬性與方法。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">(</span><span class="kt">string</span><span class="na">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Car</span> <span class="n">car</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Car</span><span class="p">();</span>
+        <span class="n">car</span><span class="p">.</span><span class="n">Brand</span> <span class="p">=</span> <span class="s">&#34;Honda&#34;</span><span class="p">;</span>
+        <span class="n">car</span><span class="p">.</span><span class="n">Color</span> <span class="p">=</span> <span class="s">&#34;Blue&#34;</span><span class="p">;</span>
+        <span class="n">car</span><span class="p">.</span><span class="n">Speed</span> <span class="p">=</span> <span class="m">60</span><span class="p">;</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;建立一台汽車，廠牌：{car.Brand}，顏色：{car.Color}，目前速度：{car.Speed}。&#34;</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">ReadKey</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Car</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Brand</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Color</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">Speed</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="n">Accelerate</span><span class="p">()</span>
+    <span class="p">{</span>
+
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="n">Brake</span><span class="p">()</span>
+    <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>執行結果</strong>
+<img src="/images/2019102901/NewClass.png" alt="&quot;New Car Class&quot;" /></p>
+
+<h2 id="2-封裝-encapsulation">2. 封裝（Encapsulation）&nbsp;<a class="anchor" href="#2-封裝-encapsulation"><i class="small linkify icon"></i></a> </h2>
+
+<p>隱藏或保護內部實作的細節，並且可以透過存取層級（Public、Private、Protected）來設定屬性或方法，像汽車擁有加速以及剎車的方法，對外只是提供加速與剎車的方法，但外部的使用者不用知道它的加速和剎車方法是如何實作，以剛剛所建立的汽車類別來看，我們透過實作加速和剎車方法來示範，除了要讓汽車可以加速外，我們也要限制它的速限，限制它的最高時速只能到達200，剎車減速不可以將速度減至小於0，透過這樣的限制，即使外部使用者傳入了超過規定的值，我們依然可以明確的把傳入值控制在我們要的範圍內。</p>
+
+<p><strong>程式範例</strong><br />
+實作汽車的加速、剎車方法，即使加速我輸入超過200的值，它也只能加速至我設定的200，剎車輸入大於200的值，也只能將速度歸0。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">(</span><span class="kt">string</span><span class="na">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Car</span> <span class="n">car</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Car</span><span class="p">();</span>
+        <span class="n">car</span><span class="p">.</span><span class="n">Brand</span> <span class="p">=</span> <span class="s">&#34;Honda&#34;</span><span class="p">;</span>
+        <span class="n">car</span><span class="p">.</span><span class="n">Color</span> <span class="p">=</span> <span class="s">&#34;Blue&#34;</span><span class="p">;</span>
+        <span class="n">car</span><span class="p">.</span><span class="n">Speed</span> <span class="p">=</span> <span class="m">60</span><span class="p">;</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;建立一台汽車，廠牌：{car.Brand}，顏色：{car.Color}，目前速度：{car.Speed}。&#34;</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;進行加速，輸入要加速的速度？&#34;</span><span class="p">);</span>
+        <span class="kt">var</span> <span class="n">speed</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+        <span class="n">car</span><span class="p">.</span><span class="n">Accelerate</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;汽車加速至{car.Speed}&#34;</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;進行減速，輸入要減速的速度？&#34;</span><span class="p">);</span>
+        <span class="n">speed</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+        <span class="n">car</span><span class="p">.</span><span class="n">Brake</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;汽車減速至{car.Speed}&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Car</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Brand</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Color</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">Speed</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="n">Accelerate</span><span class="p">(</span><span class="kt">int</span> <span class="n">speed</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Speed</span> <span class="p">+=</span> <span class="n">speed</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Speed</span> <span class="p">&gt;</span> <span class="m">200</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Speed</span> <span class="p">=</span> <span class="m">200</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="n">Brake</span><span class="p">(</span><span class="kt">int</span> <span class="n">speed</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Speed</span> <span class="p">-=</span> <span class="n">speed</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Speed</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Speed</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>執行結果</strong>
+<img src="/images/2019102901/Encapsulation.png" alt="封裝" /></p>
+
+<h2 id="3-繼承-inheritance">3. 繼承（Inheritance）&nbsp;<a class="anchor" href="#3-繼承-inheritance"><i class="small linkify icon"></i></a> </h2>
+
+<p>繼承在 C# 中也是相當重要的一環，繼承可讓您建立的類別被重複使用、擴充和修改類別中所定義的方法。<br />
+被繼承的類別稱為「基底類別」(Base Class)，而繼承「基底類別」的類別稱之為「衍生類別」(Derived Class)，也有人會將「基底類別」稱之為「父類別」，「衍生類別」稱為「子類別」，其中要注意的是 C# 不支援多重繼承，所以一個「衍生類別」只能繼承一個「基底類別」。</p>
+
+<p><strong>程式範例</strong><br />
+回到剛剛汽車的例子，將 Car 做為「基底類別」，只保留汽車共同的屬性與方法，另外建立 Honda 與 Nissan 的「衍生類別」並繼承 Car 「基底類別」，當今天需要使用到 Honda 與 Nissan 這二個廠牌的汽車物件時，只要直接 new 出 Honda 與 Nissan，就可以擁有汽車的屬性與方法。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">(</span><span class="kt">string</span><span class="na">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">speed</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+
+        <span class="n">Honda</span> <span class="n">honda</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Honda</span><span class="p">();</span>
+        <span class="n">honda</span><span class="p">.</span><span class="n">Color</span> <span class="p">=</span> <span class="s">&#34;Red&#34;</span><span class="p">;</span>
+        <span class="n">honda</span><span class="p">.</span><span class="n">Speed</span> <span class="p">=</span> <span class="m">60</span><span class="p">;</span>
+
+        <span class="n">Nissan</span> <span class="n">nissan</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Nissan</span><span class="p">();</span>
+        <span class="n">nissan</span><span class="p">.</span><span class="n">Color</span> <span class="p">=</span> <span class="s">&#34;Blue&#34;</span><span class="p">;</span>
+        <span class="n">nissan</span><span class="p">.</span><span class="n">Speed</span> <span class="p">=</span> <span class="m">80</span><span class="p">;</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;建立一台汽車，廠牌：{honda.GetType().Name}，顏色：{honda.Color}，目前速度：{honda.Speed}。&#34;</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;建立一台汽車，廠牌：{nissan.GetType().Name}，顏色：{nissan.Color}，目前速度：{nissan.Speed}。&#34;</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Honda進行加速，輸入要加速的速度？&#34;</span><span class="p">);</span>
+        <span class="n">speed</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+        <span class="n">honda</span><span class="p">.</span><span class="n">Accelerate</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Honda汽車加速至{honda.Speed}&#34;</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Nissan進行加速，輸入要加速的速度？&#34;</span><span class="p">);</span>
+        <span class="n">speed</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+        <span class="n">nissan</span><span class="p">.</span><span class="n">Accelerate</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Nissan汽車加速至{nissan.Speed}&#34;</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Honda進行減速，輸入要減速的速度？&#34;</span><span class="p">);</span>
+        <span class="n">speed</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+        <span class="n">honda</span><span class="p">.</span><span class="n">Brake</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Honda汽車減速至{honda.Speed}&#34;</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Nissan進行減速，輸入要減速的速度？&#34;</span><span class="p">);</span>
+        <span class="n">speed</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+        <span class="n">nissan</span><span class="p">.</span><span class="n">Brake</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Nissan汽車減速至{nissan.Speed}&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Car</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Color</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">Speed</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="n">Accelerate</span><span class="p">(</span><span class="kt">int</span> <span class="n">speed</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Speed</span> <span class="p">+=</span> <span class="n">speed</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Speed</span> <span class="p">&gt;</span> <span class="m">200</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Speed</span> <span class="p">=</span> <span class="m">200</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="n">Brake</span><span class="p">(</span><span class="kt">int</span> <span class="n">speed</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Speed</span> <span class="p">-=</span> <span class="n">speed</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Speed</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Speed</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Honda</span> <span class="p">:</span> <span class="n">Car</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Nissan</span> <span class="p">:</span> <span class="n">Car</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>執行結果</strong>
+<img src="/images/2019102901/Inheritance.png" alt="Inheritance" /></p>
+
+<h2 id="4-多型-polymorphism">4. 多型（Polymorphism）&nbsp;<a class="anchor" href="#4-多型-polymorphism"><i class="small linkify icon"></i></a> </h2>
+
+<p>它可以在相同的介面下，用不同的型別來實現，當「衍生類別」的物件宣告或轉型成「基底類別」的型別時，還可以正確執行該「衍生類別」的行為。其實「多型」與「繼承」息息相關，繼承了「基底類別」的方法並且覆寫成新的方法，「衍生類別」除了可以新增「基底類別」所沒有的方法外（也就是指擴充），若希望覆寫「基底類別」的方法時，則要在「基底類別」的方法加上 virtual 關鍵字，「衍生類別」要覆寫「基底類別」的方法時，則要在方法加上 override 關鍵字，這樣才能覆寫「基底類別」的方法。</p>
+
+<p><a href="https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/classes-and-structs/polymorphism" target="_blank">MSDN</a> 對多型的解釋：</p>
+
+<blockquote>
+<p>基底類別可以定義和實作 virtual「方法」 ，而衍生類別可以覆寫這些方法，換句話說，衍生類別會提供自己的定義和實作。 在執行階段，當用戶端程式碼呼叫方法時，CLR 會查詢物件的執行階段類型，然後叫用虛擬方法的覆寫。 因此，在您的原始程式碼中，您可以在基底類別上呼叫方法，然後執行衍生類別版本的方法。</p>
+</blockquote>
+
+<p>簡單的說明就是&hellip;</p>
+
+<p>設計時期（Design Time）</p>
+
+<ul>
+<li>「基底類別」可以定義和實作『虛擬』屬性和方法（virtual）。</li>
+<li>「衍生類別」可以覆寫「基底類別」的『虛擬』屬性和方法（override）。</li>
+</ul>
+
+<p>所以在執行時期（Runtime），當呼叫「基底類別」的『虛擬』方法時，會改呼叫「衍生類別」覆寫的方法。要知道，在 C# 中所有的類型都是多型，因為所有的類型均是繼承自 Object 類別。</p>
+
+<p><strong>程式範例 1</strong><br />
+在另外設計的 Honda「衍生類別」中，覆寫「基底類別」的加速方法，因為我希望 Honda 的最高時速可以到達 230，另外再擴充一個渦輪加速方法。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">(</span><span class="kt">string</span><span class="na">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">speed</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+
+        <span class="n">Honda</span> <span class="n">honda</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Honda</span><span class="p">();</span>
+        <span class="n">honda</span><span class="p">.</span><span class="n">Color</span> <span class="p">=</span> <span class="s">&#34;Red&#34;</span><span class="p">;</span>
+        <span class="n">honda</span><span class="p">.</span><span class="n">Speed</span> <span class="p">=</span> <span class="m">60</span><span class="p">;</span>
+
+        <span class="n">Nissan</span> <span class="n">nissan</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Nissan</span><span class="p">();</span>
+        <span class="n">nissan</span><span class="p">.</span><span class="n">Color</span> <span class="p">=</span> <span class="s">&#34;Blue&#34;</span><span class="p">;</span>
+        <span class="n">nissan</span><span class="p">.</span><span class="n">Speed</span> <span class="p">=</span> <span class="m">80</span><span class="p">;</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;建立一台汽車，廠牌：{honda.GetType().Name}，顏色：{honda.Color}，目前速度：{honda.Speed}。&#34;</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;建立一台汽車，廠牌：{nissan.GetType().Name}，顏色：{nissan.Color}，目前速度：{nissan.Speed}。&#34;</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Honda進行加速，輸入要加速的速度？&#34;</span><span class="p">);</span>
+        <span class="n">speed</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+        <span class="n">honda</span><span class="p">.</span><span class="n">Accelerate</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Honda汽車加速至{honda.Speed}&#34;</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+        <span class="n">honda</span><span class="p">.</span><span class="n">Turbo</span><span class="p">();</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;Honda汽車開啟 Turbo，目前速度：{honda.Speed}&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Car</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Color</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">Speed</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="n">Accelerate</span><span class="p">(</span><span class="kt">int</span> <span class="n">speed</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Speed</span> <span class="p">+=</span> <span class="n">speed</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Speed</span> <span class="p">&gt;</span> <span class="m">200</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Speed</span> <span class="p">=</span> <span class="m">200</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="n">Brake</span><span class="p">(</span><span class="kt">int</span> <span class="n">speed</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Speed</span> <span class="p">-=</span> <span class="n">speed</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Speed</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Speed</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Honda</span> <span class="p">:</span> <span class="n">Car</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Accelerate</span><span class="p">(</span><span class="kt">int</span> <span class="n">speed</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Speed</span> <span class="p">+=</span> <span class="n">speed</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Speed</span> <span class="p">&gt;</span> <span class="m">230</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Speed</span> <span class="p">=</span> <span class="m">230</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="n">Turbo</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Speed</span> <span class="p">+=</span> <span class="m">30</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Nissan</span> <span class="p">:</span> <span class="n">Car</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>執行結果</strong><br />
+<img src="/images/2019102901/Polymorphism1.png" alt="Polymorphism" /></p>
+
+<p><strong>程式範例 2</strong><br />
+多型另一種使用方式，可以透過「基底類別」來建立一個集合，但放入集合中的物件都是「衍生類別」的型別，例如今天我不曉得使用者在編譯時期會建立那種汽車物件，但程式必需要能夠正確的執行該傳入物件的屬性與方法，這時就可以透過多型來解決。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-C#" data-lang="C#"><span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">(</span><span class="kt">string</span><span class="na">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">speed</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+
+        <span class="n">List</span><span class="p">&lt;</span><span class="n">Car</span><span class="p">&gt;</span> <span class="n">cars</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Car</span><span class="p">&gt;();</span>
+
+        <span class="n">cars</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">Honda</span>
+        <span class="p">{</span>
+            <span class="n">Color</span> <span class="p">=</span> <span class="s">&#34;Red&#34;</span><span class="p">,</span>
+            <span class="n">Speed</span> <span class="p">=</span> <span class="m">60</span>
+        <span class="p">});</span>
+
+        <span class="n">cars</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">Nissan</span>
+        <span class="p">{</span>
+            <span class="n">Color</span> <span class="p">=</span> <span class="s">&#34;Blue&#34;</span><span class="p">,</span>
+            <span class="n">Speed</span> <span class="p">=</span> <span class="m">80</span>
+        <span class="p">});</span>
+
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">car</span> <span class="k">in</span> <span class="n">cars</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;建立一台汽車，廠牌：{car.GetType().Name}，顏色：{car.Color}，目前速度：{car.Speed}。&#34;</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;{car.GetType().Name}進行加速，輸入要加速的速度？&#34;</span><span class="p">);</span>
+            <span class="n">speed</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">());</span>
+            <span class="n">car</span><span class="p">.</span><span class="n">Accelerate</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;{car.GetType().Name}汽車加速至{car.Speed}&#34;</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Car</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Color</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">Speed</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="n">Accelerate</span><span class="p">(</span><span class="kt">int</span> <span class="n">speed</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Speed</span> <span class="p">+=</span> <span class="n">speed</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Speed</span> <span class="p">&gt;</span> <span class="m">200</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Speed</span> <span class="p">=</span> <span class="m">200</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="n">Brake</span><span class="p">(</span><span class="kt">int</span> <span class="n">speed</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Speed</span> <span class="p">-=</span> <span class="n">speed</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Speed</span> <span class="p">&lt;</span> <span class="m">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Speed</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Honda</span> <span class="p">:</span> <span class="n">Car</span>
+<span class="p">{</span>
+    
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Nissan</span> <span class="p">:</span> <span class="n">Car</span>
+<span class="p">{</span>
+
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>執行結果</strong><br />
+<img src="/images/2019102901/Polymorphism2.png" alt="Polymorphism" /></p>
+
+<p>上述就是物件導向四種特性的說明與示範，初學者一定要了解，當然實際運用上，可不只這樣，還會搭配 SOLID 原則，不過那又是另一個議題了，至少先搞懂這四個特性吧。</p>
+
+				</article>				
+			</section>
+
+			
+			<section class="ui secondary attached segment dream-tags">
+				
+					
+
+
+
+
+	
+		<a class="ui label orange " href="/tags/oop" title="OOP">OOP</a>
+	
+		<a class="ui label red " href="/tags/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91" title="物件導向">物件導向</a>
+	
+		<a class="ui label red " href="/tags/c" title="C#">C#</a>
+	
+
+
+				
+			</section>
+
+			
+			
+				<section class="ui secondary  attached segment share row box">
+					
+
+
+
+
+
+
+
+
+<div class="author">
+	
+	<img class="avatar" src="/images/coreychen.png">
+	
+</div>
+<div class="info grow flexbox">
+	<a href="https://twitter.com/coreychen71">
+	<p class="name">Corey Chen</p>
+	</a>
+	<p class="desc">I&#39;m not best, but I&#39;m trying my best.</p>
+</div>
+
+
+<section class="buttons row box">
+	<div class="facebook none flexbox" href="#" onclick="window.open(
+			'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+			'facebook-share-dialog',
+			'width=626,height=436'); return false;">
+		<button class="ui facebook button"><i class="facebook icon"></i>Share</button>
+	</div>
+	<div class="twitter none flexbox" onclick="window.open('https://twitter.com/intent/tweet?text=Read &quot;OOP 物件導向的四個特性 &quot; by @coreychen71 https:\/\/coreychen71.github.io\/posts\/2019-10\/oop\/','_self')">
+		<button class="ui twitter button"><i class="twitter icon"></i>Tweet</button>
+	</div>
+</section>
+
+				</section>
+			
+
+			
+			
+			
+
+			
+			
+				<div class="ui secondary bottom attached stacked segment disqus">
+					
+<div id="disqus_thread"></div>
+<script>
+	var disqus_config = function () {
+		this.page.url = 'https:\/\/coreychen71.github.io\/posts\/2019-10\/oop\/';
+		this.page.identifier = '27dd94d66f821bef7f65caa85f5c838f';
+	};
+	(function() {
+   	var d = document, s = d.createElement('script');
+   	s.src = 'https://' + 'coreychen71' + '.disqus.com/embed.js';
+   	s.setAttribute('data-timestamp', +new Date());
+   	(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+				</div>
+			
+		</div>
+	</div>
+
+				</div>
+				<div class="back">
+					
+<nav class="ui top secondary menu bar">
+	<div class="item">
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
+	</div>
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+
+	
+	
+	
+	
+	
+	
+	
+		
+		
+			<div class="item">
+				<a href="mailto:coreychen71@gmail.com" target="	_blank">
+					<i id="ico" class="inverted big link mail icon" title="Email"></i>
+				</a>
+			</div>
+		
+	
+		
+		
+			<div class="item">
+				<a href="https://www.facebook.com/coreychen0723" target="	_blank">
+					<i id="ico" class="inverted big link facebook icon" title="Facebook"></i>
+				</a>
+			</div>
+		
+	
+		
+		
+			<div class="item">
+				<a href="https://twitter.com/coreychen71" target="	_blank">
+					<i id="ico" class="inverted big link twitter icon" title="Twitter"></i>
+				</a>
+			</div>
+		
+	
+		
+		
+			<div class="item">
+				<a href="https://www.instagram.com/coreychen71" target="	_blank">
+					<i id="ico" class="inverted big link instagram icon" title="Instagram"></i>
+				</a>
+			</div>
+		
+	
+		
+		
+			<div class="item">
+				<a href="https://github.com/coreychen71" target="	_blank">
+					<i id="ico" class="inverted big link github icon" title="GitHub"></i>
+				</a>
+			</div>
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+		
+		
+	
+</nav>
+
+
+
+<div class="ui centered grid about">
+	<div class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
+		<section class="ui stacked segments">
+			<div class="ui inverted segment">
+				<article class="twemoji">
+					<p><head>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/v4-shims.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+</head></p>
+
+<h1 id="about-me">About Me</h1>
+
+<p>Hi, my name is Corey Chen, I am currently dedicated to C# development.<br />
+Usually in the company is mainly responsible for the development of WinForm, and sometimes the development of WEB and Report.<br />
+I believe that on the road of development, only continuous learning can have continuous driving force.<br />
+So I want to use this blog to record problems encountered during development and learn new technologies.<br />
+Please feel free to contact me if you have any comments.</p>
+
+<hr />
+
+<h1 id="關於我">關於我</h1>
+
+<p>嗨，我的名字是 Corey Chen，我目前致力於 C# 開發。<br />
+通常在公司主要負責 WinForm 的開發，有時還會開發 WEB 和 Report。<br />
+我相信，在開發的道路上，只有不斷學習才能有持續的動力。<br />
+所以我想用這個部落格記錄開發過程中遇到的問題並學習新技術。<br />
+如果您有任何意見，請隨時與我聯繫。</p>
+
+<!-- <a class="btn btn-default btn-sm" target="_blank" href="https://github.com/coreychen71">
+    <i class="fab fa-github fa-2x"></i>
+</a> 
+<a class="btn btn-default btn-sm" target="_blank" href="https://www.facebook.com/coreychen0723">
+    <i class="fab fa-facebook-square fa-2x"></i>
+</a> 
+<a class="btn btn-default btn-sm" target="_blank" href="https://twitter.com/coreychen71">
+    <i class="fab fa-twitter fa-2x"></i>
+</a> 
+<a class="btn btn-default btn-sm" target="_blank" href="https://instagram.com/coreychen71">
+    <i class="fab fa-instagram fa-2x"></i>
+</a> 
+<a class="btn btn-default btn-sm" target="_blank" href="mailto:coreychen71@gmail.com">
+    <i class="far fa-envelope-open fa-2x"></i>
+</a> -->
+
+				</article>
+			</div>
+		</section>
+	</div>
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+	
+	
+		<script id="dsq-count-scr" src="//coreychen71.disqus.com/count.js" async></script>
+	
+
+		
+
+<script src="/js/site.js"></script>
+
+
+
+
+
+
+
+
+
+
+	
+	<script>
+		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+		ga('create', 'UA-139621109-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+		
+
+
+		
+
+
+	</body>
+</html>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C#學習 on Corey Chen&#39;s Blog</title>
-    <link>https://coreychen71.github.io/categories/c#%E5%AD%B8%E7%BF%92/</link>
-    <description>Recent content in C#學習 on Corey Chen&#39;s Blog</description>
+    <title>物件導向 on Corey Chen&#39;s Blog</title>
+    <link>https://coreychen71.github.io/tags/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91/</link>
+    <description>Recent content in 物件導向 on Corey Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 29 Oct 2019 22:09:03 +0800</lastBuildDate>
     
-	<atom:link href="https://coreychen71.github.io/categories/c#%E5%AD%B8%E7%BF%92/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://coreychen71.github.io/tags/%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,20 +22,6 @@
 程式範例
 依照汽車的屬性與行為，設計一個 Car 類別並使用 Car 類別生成一個汽車物件後，使用它的屬性與方法。
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30  class Program { public static void Main(string[] args) { Car car = new Car(); car.Brand = &amp;#34;Honda&amp;#34;; car.</description>
-    </item>
-    
-    <item>
-      <title>強型別與弱型別</title>
-      <link>https://coreychen71.github.io/posts/2019-06/strongtypeweaktype/</link>
-      <pubDate>Mon, 10 Jun 2019 22:28:40 +0800</pubDate>
-      
-      <guid>https://coreychen71.github.io/posts/2019-06/strongtypeweaktype/</guid>
-      <description>何謂弱型別？ MSDN 上面有這麼一段對弱型別的描述：
-未宣告的變數以及不具資料型別的宣告變數都會指定為 Object 資料型別，這會加快程式的撰寫，但可能會使程式的執行變慢。
-弱型別除了不支援 Visual Studio 的 IntelliSense 之外，另一個缺點就是要等到「執行時期」才會發生錯誤，無法在「編譯時期」就能發現錯誤，進而導致在開發或是偵錯上的不便，舉一個較為簡單的例子來做說明，例如大家在專案裡最常接觸並且使用的「DataSet」或「DataTable」就是弱型別的一種，尤其是在撈取資料庫資料的時候，大家一開始接觸的一定就是「DataTable」，所以下面就以「DataTable」來示範當使用弱型別時，最常遇到的三種無法在「編譯時期」就發現的錯誤。
-這邊示範的資料庫為「北風資料庫」的 Employees 資料表。
-假設我們要取得 EmployeeID, LastName, FirstName, Title, BirthDate 這5個欄位。
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  using (SqlConnection SqlCon = new SqlConnection(strConn)) { string strComm = &amp;#34;select EmployeeID, LastName, FirstName, Title, BirthDate from Employees&amp;#34;; SqlCommand sqlComm = new SqlCommand(strComm, SqlCon); try { SqlCon.Open(); DataTable table = new DataTable(); SqlDataReader reader = sqlComm.</description>
     </item>
     
   </channel>

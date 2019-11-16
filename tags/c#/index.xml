@@ -5,10 +5,24 @@
     <link>https://coreychen71.github.io/tags/c#/</link>
     <description>Recent content in C# on Corey Chen&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 10 Jun 2019 22:28:40 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 22:09:03 +0800</lastBuildDate>
     
 	<atom:link href="https://coreychen71.github.io/tags/c#/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OOP 物件導向的四個特性</title>
+      <link>https://coreychen71.github.io/posts/2019-10/oop/</link>
+      <pubDate>Tue, 29 Oct 2019 22:09:03 +0800</pubDate>
+      
+      <guid>https://coreychen71.github.io/posts/2019-10/oop/</guid>
+      <description>相信只要有在寫程式的人，一定都有聽過物件導向這四個字，尤其是寫 C# 的人一定也曉得 C# 本身就是物件導向程式語言。但聽過歸聽過，還是有許多人仍不曉得物件導向的四大特性，尤其是初學者，所以今天就來說說這四大特性，因為這是很重要的觀念，只要您今天是寫 C#，甚至希望您日後的程式碼能夠好維護的話，更是不能不知道。至於物件導向的由來或是介紹之類的，在這篇文章中不會有任何的介紹，有興趣的人請直接Google，因為在這篇文章主要是直接帶您認識這四大特性！
+物件導向四個特性： 1. 抽象（Abstraction） 抽象其實不要把它想的太複雜，簡單地說就是把真實世界的需求轉換成類別，而這個類別可以包含狀態（屬性）或是行為（方法）。
+例如真實世界中的汽車，汽車的屬性會有廠牌、顏色、速度等等，那汽車的行為不外乎就是加速、剎車，所以在大致分出汽車的屬性與行為後，就可以依照屬性與行為來設計一個汽車的類別。設計好汽車類別後，這個汽車類別就是一個藍圖，需要使用它的時，只要將它 new 出來，就可以針對 new 出來的汽車物件屬性或方法來進行存取。
+程式範例
+依照汽車的屬性與行為，設計一個 Car 類別並使用 Car 類別生成一個汽車物件後，使用它的屬性與方法。
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30  class Program { public static void Main(string[] args) { Car car = new Car(); car.Brand = &amp;#34;Honda&amp;#34;; car.</description>
+    </item>
     
     <item>
       <title>強型別與弱型別</title>
